@@ -42,7 +42,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="AuthenticationLib">
-      <HintPath>..\..\..\..\Users\Ryan\Documents\GitHub\Libraries\AuthenticationLib\AuthenticationLib\bin\Release\AuthenticationLib.dll</HintPath>
+      <HintPath>..\..\..\Libraries\AuthenticationLib\AuthenticationLib\bin\Release\AuthenticationLib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
