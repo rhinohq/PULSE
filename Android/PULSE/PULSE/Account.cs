@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.Net;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -34,10 +35,12 @@ namespace PULSE
 			if (User.Username == null)
 				return false;
 
+			StoreAccount.StoreUser(User);
+
 			return true;
 		}
 
-		public class AuthUser
+		class AuthUser
 		{
 			public string Username { get; set; }
 			public string PasswordHash { get; set; }
@@ -51,6 +54,12 @@ namespace PULSE
 			public string Email { get; set; }
 			public string PhoneNum { get; set; }
 			public string PasswordHash { get; set; }
+			public virtual ICollection<Device> Devices { get; set; }
+		}
+
+		public class Device
+		{
+			public string PublicKey { get; set; }
 		}
 	}
 }

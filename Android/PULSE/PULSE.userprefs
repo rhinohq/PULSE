@@ -5,21 +5,20 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="PULSE\Account.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PULSE\Data.cs">
     <Files>
       <File FileName="PULSE\MainActivity.cs" Line="9" Column="3" />
-      <File FileName="PULSE\Account.cs" Line="14" Column="17" />
+      <File FileName="PULSE\Account.cs" Line="38" Column="33" />
       <File FileName="PULSE\Speech.cs" Line="75" Column="5" />
+      <File FileName="PULSE\Data.cs" Line="9" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="PULSE" expanded="True" selected="True">
+          <Node name="PULSE" expanded="True">
             <Node name="PULSE" expanded="True">
               <Node name="ComponentReferenceFolder" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="layout" expanded="True" />
-              </Node>
+              <Node name="Data.cs" selected="True" />
             </Node>
           </Node>
         </State>
