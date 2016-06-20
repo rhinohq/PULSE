@@ -7,11 +7,11 @@ using AuthenticationLib;
 
 namespace PULSE
 {
-	public class Account
+	public static class Account
 	{
 		const string AuthURL = "https://mypulse.me/api/auth/";
 
-		public bool Login(string Username, string Password)
+		public static bool Login(string Username, string Password)
 		{
 			WebClient Client = new WebClient();
 			string PasswordHash = Authentication.HashCredentials(Username, Password);
