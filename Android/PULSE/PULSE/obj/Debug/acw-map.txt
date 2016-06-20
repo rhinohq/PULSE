@@ -1,0 +1,16 @@
+PULSE.MainActivity, PULSE;md5cc501f784a6cd5f3a0f90bae8a4cdf87.MainActivity
+PULSE.MainActivity, PULSE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cc501f784a6cd5f3a0f90bae8a4cdf87.MainActivity
+PULSE.MainActivity;md5cc501f784a6cd5f3a0f90bae8a4cdf87.MainActivity
+pulse.MainActivity;md5cc501f784a6cd5f3a0f90bae8a4cdf87.MainActivity
+PULSE.Speech/SpeechRec, PULSE;md5cc501f784a6cd5f3a0f90bae8a4cdf87.Speech_SpeechRec
+PULSE.Speech+SpeechRec, PULSE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cc501f784a6cd5f3a0f90bae8a4cdf87.Speech_SpeechRec
+PULSE.Speech.SpeechRec;md5cc501f784a6cd5f3a0f90bae8a4cdf87.Speech_SpeechRec
+pulse.Speech_SpeechRec;md5cc501f784a6cd5f3a0f90bae8a4cdf87.Speech_SpeechRec
+PULSE.LoginActivity, PULSE;md5cc501f784a6cd5f3a0f90bae8a4cdf87.LoginActivity
+PULSE.LoginActivity, PULSE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cc501f784a6cd5f3a0f90bae8a4cdf87.LoginActivity
+PULSE.LoginActivity;md5cc501f784a6cd5f3a0f90bae8a4cdf87.LoginActivity
+pulse.LoginActivity;md5cc501f784a6cd5f3a0f90bae8a4cdf87.LoginActivity
+Plugin.TextToSpeech.TextToSpeech, Plugin.TextToSpeech;md54e563667b320e8477294d1af4ca5a8db.TextToSpeech
+Plugin.TextToSpeech.TextToSpeech, Plugin.TextToSpeech, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null;md54e563667b320e8477294d1af4ca5a8db.TextToSpeech
+Plugin.TextToSpeech.TextToSpeech;md54e563667b320e8477294d1af4ca5a8db.TextToSpeech
+plugin.texttospeech.TextToSpeech;md54e563667b320e8477294d1af4ca5a8db.TextToSpeech
