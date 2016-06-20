@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<style name="Theme.Custom" parent="@android:style/Theme.Material.Light.DarkActionBar">
+		<item name="android:colorPrimaryDark">#ffc62828</item>
+	</style>
+</resources>
