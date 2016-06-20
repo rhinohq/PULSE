@@ -44,6 +44,9 @@
     <Reference Include="AuthenticationLib">
       <HintPath>..\..\..\Libraries\AuthenticationLib\AuthenticationLib\bin\Release\AuthenticationLib.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -55,6 +58,7 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -69,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="json.net">
+      <Version>7.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
