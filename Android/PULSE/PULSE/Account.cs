@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 
+using Android.Content;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -10,6 +12,7 @@ namespace PULSE
 {
 	public static class Account
 	{
+		public static User CurrentUser { get; set; }
 		const string AuthURL = "https://mypulse.me/api/auth/";
 
 		public static bool Login(string Username, string Password)
@@ -38,6 +41,24 @@ namespace PULSE
 			StoreAccount.StoreUser(User);
 
 			return true;
+		}
+
+		public static void SignUp(LoginActivity Activity)
+		{ 
+			Android.Net.Uri URI = Android.Net.Uri.Parse("https://mypulse.me/SignUp/");
+			Intent Intent = new Intent(Intent.ActionView);
+			Intent.SetData(URI);
+
+			Intent Open = Intent.CreateChooser(Intent, "Open with");
+
+			Activity.StartActivity(Open);
+		}
+
+		public static void LogOut(LoginActivity Activity)
+		{
+			StoreAccount.DeleteDB();
+
+			Activity.StartActivity(typeof(LoginActivity));
 		}
 
 		class AuthUser

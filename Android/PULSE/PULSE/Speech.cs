@@ -1,4 +1,4 @@
-﻿using Refractored.Xam.TTS;
+﻿using Plugin.TextToSpeech;
 
 using Android.Content;
 using Android.OS;
@@ -14,7 +14,7 @@ namespace PULSE
 	{
 		public static void Speak(string TextToSpeak)
 		{
-			CrossTextToSpeech.Current.Speak(TextToSpeak);
+			CrossTextToSpeech.Current.Speak(TextToSpeak, true);
 		}
 
 		public class SpeechRec : Java.Lang.Object, IRecognitionListener

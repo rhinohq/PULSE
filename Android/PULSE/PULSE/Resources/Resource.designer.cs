@@ -26,8 +26,8 @@ namespace PULSE
 		
 		public static void UpdateIdValues()
 		{
-			global::Refractored.Xam.TTS.Resource.String.ApplicationName = global::PULSE.Resource.String.ApplicationName;
-			global::Refractored.Xam.TTS.Resource.String.Hello = global::PULSE.Resource.String.Hello;
+			global::Plugin.TextToSpeech.Resource.String.ApplicationName = global::PULSE.Resource.String.ApplicationName;
+			global::Plugin.TextToSpeech.Resource.String.Hello = global::PULSE.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -48,6 +48,12 @@ namespace PULSE
 			
 			// aapt resource value: 0x7f060001
 			public const int btnLogIn = 2131099649;
+			
+			// aapt resource value: 0x7f060004
+			public const int pbr_SignIn = 2131099652;
+			
+			// aapt resource value: 0x7f060003
+			public const int relativeLayout1 = 2131099651;
 			
 			// aapt resource value: 0x7f060000
 			public const int txtLogIn = 2131099648;
@@ -72,7 +78,10 @@ namespace PULSE
 			public const int Login = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int LoginDialog = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int Main = 2130903042;
 			
 			static Layout()
 			{

@@ -39,4 +39,17 @@
         android:clickable="true"
         android:hapticFeedbackEnabled="true"
         android:textSize="17dp" />
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:id="@+id/relativeLayout1">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pbr_SignIn"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 </LinearLayout>

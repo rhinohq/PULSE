@@ -17,6 +17,7 @@ namespace PULSE
 
 			DB.Insert(new User
 			{
+				ID = 1,
 				FirstName = User.FirstName,
 				LastName = User.LastName,
 				Username = User.Username,
@@ -34,8 +35,40 @@ namespace PULSE
 			}
 		}
 
+		public static void DeleteDB()
+		{ 
+			SQLiteConnection DB = new SQLiteConnection(DBPath);
+
+			DB.DeleteAll<User>();
+			DB.DeleteAll<Device>();
+
+			DB.Close();
+		}
+
+		public static Account.User GetUser()
+		{ 
+			SQLiteConnection DB = new SQLiteConnection(DBPath);
+			Account.User User = new Account.User();
+
+			User DBUser = DB.Get<User>(1);
+
+			User.FirstName = DBUser.FirstName;
+			User.LastName = DBUser.LastName;
+			User.Username = DBUser.Username;
+			User.Email = DBUser.Email;
+			User.PhoneNum = DBUser.PasswordHash;
+
+			foreach (Device Device in DB.Query<Device>("SELECT * FROM Device"))
+				User.Devices.Add(new Account.Device { PublicKey = Device.PublicKey });
+
+			return User;
+		}
+
 		private class User
 		{ 
+			[PrimaryKey]
+			public int ID { get; set; }
+
 			public string FirstName { get; set; }
 			public string LastName { get; set; }
 			public string Username { get; set; }

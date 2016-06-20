@@ -8,9 +8,9 @@ using Android.App;
 [assembly: AssemblyTitle("PULSE")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Ryan")]
+[assembly: AssemblyCompany("PULSE")]
+[assembly: AssemblyProduct("PULSE.Android")]
+[assembly: AssemblyCopyright("PULSE")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
