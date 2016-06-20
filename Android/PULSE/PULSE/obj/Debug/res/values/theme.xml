@@ -1,0 +1,1 @@
+<resources><style name="Theme.Custom" parent="@android:style/Theme.Material.Light.DarkActionBar"><item name="android:colorPrimaryDark">#ffc62828</item></style></resources>

@@ -1,1 +1,14 @@
-﻿<Properties StartupItem="PULSE\PULSE.csproj" />
+﻿<Properties StartupItem="PULSE\PULSE.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.PULSE AndroidDesignerPreferredDevice="Nexus 5" AndroidDesignerPreferredTheme="Theme.Custom" PreferredExecutionTarget="Android.5&quot; KitKat (4.4) XXHDPI Phone" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="PULSE\MainActivity.cs">
+    <Files>
+      <File FileName="PULSE\MainActivity.cs" Line="9" Column="3" />
+      <File FileName="PULSE\Account.cs" Line="6" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
