@@ -13,7 +13,7 @@ namespace PULSE_Web.Models
 
         public static void AddCookie(string Username, string Password, HttpResponseBase Response, bool RememberMe)
         {
-            HttpCookie LoginCookie = new HttpCookie("CCUserAuth");
+            HttpCookie LoginCookie = new HttpCookie("PULSEUserAuth");
             LoginCookie.Values["Username"] = Username;
             LoginCookie.Values["Password"] = Authentication.Cryptography.Encrypt(Password, Username);
 

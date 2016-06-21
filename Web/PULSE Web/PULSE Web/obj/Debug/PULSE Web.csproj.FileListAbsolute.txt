@@ -56,6 +56,5 @@ C:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Mvc.xml
 C:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Net.Http.Formatting.xml
 C:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Http.xml
 C:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Http.WebHost.xml
-C:\PULSE\Web\PULSE Web\PULSE Web\obj\Debug\PULSE Web.csprojResolveAssemblyReference.cache
 C:\PULSE\Web\PULSE Web\PULSE Web\obj\Debug\PULSE Web.dll
 C:\PULSE\Web\PULSE Web\PULSE Web\obj\Debug\PULSE Web.pdb
