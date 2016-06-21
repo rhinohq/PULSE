@@ -18,19 +18,30 @@ namespace PULSE_Web.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
+        // GET api/<controller>/{user}/{hash}
+        [HttpGet]
+        public bool Get(string username, string passwordhash)
         {
-            return "value";
+            User user = UserDB.Users.Where(x => x.Username == username).FirstOrDefault();
+
+            if (user.PasswordHash == Authentication.HashCredentials(user.Email, passwordhash))
+                return true;
+            else
+                return false;
         }
 
         // POST api/<controller>
+        [HttpPost]
         public User Post(AuthRequest Request)
         {
             User user = UserDB.Users.Where(x => x.Username == Request.Username).FirstOrDefault();
 
             if (user.PasswordHash == Authentication.HashCredentials(user.Email, Request.PasswordHash))
+            {
+                user.PasswordHash = Request.PasswordHash;
+
                 return user;
+            }
             else
                 return new User();
         }
