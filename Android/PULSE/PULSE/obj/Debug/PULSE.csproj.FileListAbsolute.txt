@@ -2,7 +2,6 @@ C:\PULSE\Android\PULSE\PULSE\bin\Debug\PULSE.dll
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\PULSE.pdb
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\com.pulse.pulse.apk
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\com.pulse.pulse-Signed.apk
-C:\PULSE\Android\PULSE\PULSE\bin\Debug\AuthenticationLib.dll
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\Newtonsoft.Json.dll
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\Plugin.Messaging.Abstractions.dll
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\Plugin.Messaging.dll
@@ -12,8 +11,6 @@ C:\PULSE\Android\PULSE\PULSE\bin\Debug\SQLite-net.dll
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\SQLitePCL.batteries.dll
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\SQLitePCL.raw.dll
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\SQLitePCLPlugin_esqlite3.dll
-C:\PULSE\Android\PULSE\PULSE\bin\Debug\AuthenticationLib.pdb
-C:\PULSE\Android\PULSE\PULSE\bin\Debug\AuthenticationLib.dll.mdb
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\Newtonsoft.Json.xml
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\Plugin.TextToSpeech.Abstractions.pdb
 C:\PULSE\Android\PULSE\PULSE\bin\Debug\Plugin.TextToSpeech.Abstractions.xml

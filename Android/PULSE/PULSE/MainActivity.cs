@@ -15,7 +15,9 @@ namespace PULSE
 			Account.CurrentUser = StoreAccount.GetUser();
 
 			if (!Account.CheckUser())
-				this.StartActivity(typeof(LoginActivity));
+				StartActivity(typeof(LoginActivity));
+
+			Speech.Speak("Hello, " + Account.CurrentUser.FirstName);
 		}
 	}
 }

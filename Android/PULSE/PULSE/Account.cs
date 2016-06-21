@@ -40,6 +40,7 @@ namespace PULSE
 				return false;
 
 			StoreAccount.StoreUser(User);
+			CurrentUser = User;
 
 			return true;
 		}

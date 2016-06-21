@@ -71,7 +71,7 @@ namespace PULSE
 			}
 		}
 
-		private class User
+		class User
 		{ 
 			[PrimaryKey]
 			public int ID { get; set; }
@@ -84,7 +84,7 @@ namespace PULSE
 			public string PasswordHash { get; set; }
 		}
 
-		private class Device
+		class Device
 		{ 
 			public string PublicKey { get; set; }
 		}

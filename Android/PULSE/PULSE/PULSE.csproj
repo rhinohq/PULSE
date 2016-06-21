@@ -43,6 +43,7 @@
     <Reference Include="Mono.Android" />
     <Reference Include="AuthenticationLib">
       <HintPath>..\..\..\Libraries\AuthenticationLib\AuthenticationLib\bin\Release\AuthenticationLib.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
