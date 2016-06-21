@@ -14,6 +14,7 @@ namespace PULSE
 	{
 		public static User CurrentUser { get; set; }
 		const string AuthURL = "https://mypulse.me/api/auth/";
+		const string TokenURL = "https://mypulse.me/api/token/";
 
 		public static bool Login(string Username, string Password)
 		{
@@ -59,6 +60,18 @@ namespace PULSE
 			StoreAccount.DeleteDB();
 
 			Activity.StartActivity(typeof(LoginActivity));
+		}
+
+		public static bool CheckUser()
+		{ 
+			WebClient Client = new WebClient();
+			string Request = AuthURL + CurrentUser.Username + "/" + CurrentUser.PasswordHash;
+			string Response = Client.DownloadString(Request);
+
+			if (Response == "true")
+				return true;
+			else
+				return false;
 		}
 
 		class AuthUser

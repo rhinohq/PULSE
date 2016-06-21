@@ -2,12 +2,14 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Messaging\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.TextToSpeech\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.batteries\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLPlugin_esqlite3\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Messaging\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.TextToSpeech\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.batteries\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\assets</ResolvedAssetDirectory>
@@ -15,6 +17,7 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Messaging.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.TextToSpeech.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.batteries.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.raw.stamp</ResolvedResourceDirectoryStamp>

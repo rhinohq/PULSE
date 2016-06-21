@@ -11,6 +11,11 @@ namespace PULSE
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Main);
+
+			Account.CurrentUser = StoreAccount.GetUser();
+
+			if (!Account.CheckUser())
+				this.StartActivity(typeof(LoginActivity));
 		}
 	}
 }

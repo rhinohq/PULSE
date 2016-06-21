@@ -50,18 +50,25 @@ namespace PULSE
 			SQLiteConnection DB = new SQLiteConnection(DBPath);
 			Account.User User = new Account.User();
 
-			User DBUser = DB.Get<User>(1);
+			try
+			{
+				User DBUser = DB.Get<User>(1);
 
-			User.FirstName = DBUser.FirstName;
-			User.LastName = DBUser.LastName;
-			User.Username = DBUser.Username;
-			User.Email = DBUser.Email;
-			User.PhoneNum = DBUser.PasswordHash;
+				User.FirstName = DBUser.FirstName;
+				User.LastName = DBUser.LastName;
+				User.Username = DBUser.Username;
+				User.Email = DBUser.Email;
+				User.PhoneNum = DBUser.PasswordHash;
 
-			foreach (Device Device in DB.Query<Device>("SELECT * FROM Device"))
-				User.Devices.Add(new Account.Device { PublicKey = Device.PublicKey });
+				foreach (Device Device in DB.Query<Device>("SELECT * FROM Device"))
+					User.Devices.Add(new Account.Device { PublicKey = Device.PublicKey });
 
-			return User;
+				return User;
+			}
+			catch
+			{
+				return User;
+			}
 		}
 
 		private class User

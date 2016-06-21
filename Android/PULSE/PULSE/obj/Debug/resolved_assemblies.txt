@@ -1,6 +1,8 @@
 C:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\PULSE.dll
 C:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\AuthenticationLib.dll
 C:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Newtonsoft.Json.dll
+C:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Plugin.Messaging.Abstractions.dll
+C:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Plugin.Messaging.dll
 C:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Plugin.TextToSpeech.Abstractions.dll
 C:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Plugin.TextToSpeech.dll
 C:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\SQLite-net.dll

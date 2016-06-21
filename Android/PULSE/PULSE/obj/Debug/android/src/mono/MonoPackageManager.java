@@ -101,6 +101,8 @@ class MonoPackageManager_Resources {
 		"PULSE.dll",
 		"AuthenticationLib.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.Messaging.Abstractions.dll",
+		"Plugin.Messaging.dll",
 		"Plugin.TextToSpeech.Abstractions.dll",
 		"Plugin.TextToSpeech.dll",
 		"SQLite-net.dll",
