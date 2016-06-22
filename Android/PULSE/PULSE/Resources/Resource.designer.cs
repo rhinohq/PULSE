@@ -28,6 +28,8 @@ namespace PULSE
 		{
 			global::Plugin.TextToSpeech.Resource.String.ApplicationName = global::PULSE.Resource.String.ApplicationName;
 			global::Plugin.TextToSpeech.Resource.String.Hello = global::PULSE.Resource.String.Hello;
+			global::Plugin.Vibrate.Resource.String.ApplicationName = global::PULSE.Resource.String.ApplicationName;
+			global::Plugin.Vibrate.Resource.String.Hello = global::PULSE.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

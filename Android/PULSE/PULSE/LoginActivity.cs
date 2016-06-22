@@ -21,7 +21,7 @@ namespace PULSE
 			ProgressBar pbr_Progress = FindViewById<ProgressBar>(Resource.Id.pbr_SignIn);
 
 			txt_signup.Click += delegate {
-				Account.SignUp(this);
+				Account.SignUp();
 			};
 
 			but_login.Click += delegate {
@@ -33,7 +33,7 @@ namespace PULSE
 
 				if (Account.Login(Username, Password)) 
 				{ 
-					Toast.MakeText(this, "Login successful", ToastLength.Long).Show();
+					Toast.MakeText(this, "Login successful", ToastLength.Short).Show();
 
 					StartActivity(typeof(MainActivity));
 				}

@@ -8,6 +8,8 @@ using Newtonsoft.Json.Serialization;
 
 using AuthenticationLib;
 
+using Plugin.CurrentActivity;
+
 namespace PULSE
 {
 	public static class Account
@@ -45,7 +47,7 @@ namespace PULSE
 			return true;
 		}
 
-		public static void SignUp(LoginActivity Activity)
+		public static void SignUp()
 		{ 
 			Android.Net.Uri URI = Android.Net.Uri.Parse("https://mypulse.me/SignUp/");
 			Intent Intent = new Intent(Intent.ActionView);
@@ -53,14 +55,14 @@ namespace PULSE
 
 			Intent Open = Intent.CreateChooser(Intent, "Open with");
 
-			Activity.StartActivity(Open);
+			CrossCurrentActivity.Current.Activity.StartActivity(Open);
 		}
 
-		public static void LogOut(LoginActivity Activity)
+		public static void LogOut()
 		{
 			StoreAccount.DeleteDB();
 
-			Activity.StartActivity(typeof(LoginActivity));
+			CrossCurrentActivity.Current.Activity.StartActivity(typeof(LoginActivity));
 		}
 
 		public static bool CheckUser()

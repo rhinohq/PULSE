@@ -17,6 +17,8 @@ namespace PULSE
 			if (!Account.CheckUser())
 				StartActivity(typeof(LoginActivity));
 
+			Core.GSM.GetContacts();
+
 			Speech.Speak("Hello, " + Account.CurrentUser.FirstName);
 		}
 	}
