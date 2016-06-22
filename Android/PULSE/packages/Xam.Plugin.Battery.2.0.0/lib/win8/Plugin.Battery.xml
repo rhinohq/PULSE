@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Battery</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Battery.CrossBattery">
+            <summary>
+            Cross platform Battery implemenations
+            </summary>
+        </member>
+        <member name="P:Plugin.Battery.CrossBattery.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+        <member name="M:Plugin.Battery.CrossBattery.Dispose">
+            <summary>
+            Dispose of everything 
+            </summary>
+        </member>
+        <member name="T:Plugin.Battery.BatteryImplementation">
+            <summary>
+            Implementation for Battery
+            </summary>
+        </member>
+        <member name="P:Plugin.Battery.BatteryImplementation.RemainingChargePercent">
+            <summary>
+            Not supported in Windows Store, always returns 100
+            </summary>
+        </member>
+        <member name="P:Plugin.Battery.BatteryImplementation.Status">
+            <summary>
+            Not supported in Window Store, always returns full
+            </summary>
+        </member>
+        <member name="P:Plugin.Battery.BatteryImplementation.PowerSource">
+            <summary>
+            No supported in Windows Store, always returns AC
+            </summary>
+        </member>
+        <member name="M:Plugin.Battery.BatteryImplementation.Dispose(System.Boolean)">
+            <summary>
+            Dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+    </members>
+</doc>

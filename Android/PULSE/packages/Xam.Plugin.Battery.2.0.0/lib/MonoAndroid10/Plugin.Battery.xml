@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Battery</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Battery.CrossBattery">
+            <summary>
+            Cross platform Battery implemenations
+            </summary>
+        </member>
+        <member name="P:Plugin.Battery.CrossBattery.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+        <member name="M:Plugin.Battery.CrossBattery.Dispose">
+            <summary>
+            Dispose of everything 
+            </summary>
+        </member>
+        <member name="T:Plugin.Battery.BatteryBroadcastReceiver">
+            <summary>
+            Broadcast receiver to get notifications from Android on battery change
+            </summary>
+        </member>
+        <member name="F:Plugin.Battery.BatteryBroadcastReceiver.BatteryLevelChanged">
+            <summary>
+            Action to call when battery level changes
+            </summary>
+        </member>
+        <member name="M:Plugin.Battery.BatteryBroadcastReceiver.OnReceive(Android.Content.Context,Android.Content.Intent)">
+            <summary>
+            Receiver BR
+            </summary>
+            <param name="context"></param>
+            <param name="intent"></param>
+        </member>
+        <member name="T:Plugin.Battery.BatteryImplementation">
+            <summary>
+            Implementation for Feature
+            </summary>
+        </member>
+        <member name="M:Plugin.Battery.BatteryImplementation.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="P:Plugin.Battery.BatteryImplementation.RemainingChargePercent">
+            <summary>
+            Get the current battery level
+            </summary>
+        </member>
+        <member name="P:Plugin.Battery.BatteryImplementation.Status">
+            <summary>
+            Get Current battery status
+            </summary>
+        </member>
+        <member name="P:Plugin.Battery.BatteryImplementation.PowerSource">
+            <summary>
+            Get current power source of device
+            </summary>
+        </member>
+        <member name="M:Plugin.Battery.BatteryImplementation.Dispose(System.Boolean)">
+            <summary>
+            Dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+    </members>
+</doc>

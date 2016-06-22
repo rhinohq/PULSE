@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Vibrate</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Vibrate.Vibrate">
+            <summary>
+            iOS implementation to vibrate device
+            </summary>
+        </member>
+        <member name="M:Plugin.Vibrate.Vibrate.Vibration(System.Int32)">
+            <summary>
+            Vibrate device with default length
+            </summary>
+            <param name="milliseconds">Ignored (iOS doesn't expose)</param>
+        </member>
+        <member name="T:Plugin.Vibrate.CrossVibrate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Vibrate.CrossVibrate.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -6,7 +6,7 @@ namespace PULSE_Web.Models
 {
     public class UserDBEntities : DbContext
     {
-        public UserDBEntities() : base("name=UserDBEntities")
+        public UserDBEntities() : base("name=PULSEUserDB")
         {
         }
 
