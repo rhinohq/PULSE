@@ -17,7 +17,15 @@ namespace PULSE
 			if (!Account.CheckUser())
 				StartActivity(typeof(LoginActivity));
 
+			Startup();
+		}
+
+		void Startup()
+		{ 
 			Core.GSM.GetContacts();
+
+			GeoMaps.CurrentPosition = GeoMaps.FindPostion();
+			GeoMaps.CurrentLocation = GeoMaps.GetLocation();
 
 			Speech.Speak("Hello, " + Account.CurrentUser.FirstName);
 		}

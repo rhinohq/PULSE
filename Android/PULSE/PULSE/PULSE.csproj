@@ -125,6 +125,7 @@
     <Compile Include="LoginActivity.cs" />
     <Compile Include="Functionality\Core.cs" />
     <Compile Include="MainApplication.cs" />
+    <Compile Include="Functionality\GeoMaps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
