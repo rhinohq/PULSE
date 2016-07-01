@@ -18,12 +18,14 @@ namespace PULSE
 			DB.Insert(new User
 			{
 				ID = 1,
+				Username = User.Username,
 				FirstName = User.FirstName,
 				LastName = User.LastName,
-				Username = User.Username,
 				Email = User.Email,
+				Gender = User.Gender,
 				PhoneNum = User.PhoneNum,
-				PasswordHash = User.PasswordHash
+				PasswordHash = User.PasswordHash,
+				AccountType = User.AccountType
 			});
 
 			foreach (Account.Device Device in User.Devices)
@@ -54,11 +56,14 @@ namespace PULSE
 			{
 				User DBUser = DB.Get<User>(1);
 
+				User.Username = DBUser.Username;
 				User.FirstName = DBUser.FirstName;
 				User.LastName = DBUser.LastName;
-				User.Username = DBUser.Username;
 				User.Email = DBUser.Email;
-				User.PhoneNum = DBUser.PasswordHash;
+				User.Gender = DBUser.Gender;
+				User.PhoneNum = DBUser.PhoneNum;
+				User.PasswordHash = DBUser.PasswordHash;
+				User.AccountType = DBUser.AccountType;
 
 				foreach (Device Device in DB.Query<Device>("SELECT * FROM Device"))
 					User.Devices.Add(new Account.Device { PublicKey = Device.PublicKey });
@@ -67,7 +72,7 @@ namespace PULSE
 			}
 			catch
 			{
-				return User;
+				return new Account.User();
 			}
 		}
 
@@ -76,12 +81,14 @@ namespace PULSE
 			[PrimaryKey]
 			public int ID { get; set; }
 
+			public string Username { get; set; }
 			public string FirstName { get; set; }
 			public string LastName { get; set; }
-			public string Username { get; set; }
 			public string Email { get; set; }
+			public char Gender { get; set; }
 			public string PhoneNum { get; set; }
 			public string PasswordHash { get; set; }
+			public string AccountType { get; set; }
 		}
 
 		class Device

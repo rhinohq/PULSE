@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B0E4BAD-7158-4528-AD34-59CC2C109EE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenWeatherMap</RootNamespace>
+    <AssemblyName>OpenWeatherMap</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\Debug\NET45\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\Release\NET45\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\OpenWeatherMap\Clients\ApiClientBase.cs">
+      <Link>Clients\ApiClientBase.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Clients\CurrentWeatherClient.cs">
+      <Link>Clients\CurrentWeatherClient.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Clients\ForecastClient.cs">
+      <Link>Clients\ForecastClient.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Clients\IApiClientBase.cs">
+      <Link>Clients\IApiClientBase.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Clients\ICurrentWeatherClient.cs">
+      <Link>Clients\ICurrentWeatherClient.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Clients\IForecastClient.cs">
+      <Link>Clients\IForecastClient.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Clients\ISearchClient.cs">
+      <Link>Clients\ISearchClient.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Clients\SearchClient.cs">
+      <Link>Clients\SearchClient.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Exceptions\OpenWeatherMapException.cs">
+      <Link>Exceptions\OpenWeatherMapException.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Extensions\DictionnaryExtensions.cs">
+      <Link>Extensions\DictionnaryExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Extensions\StringExtensions.cs">
+      <Link>Extensions\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Extensions\UriExtensions.cs">
+      <Link>Extensions\UriExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Helpers\Ensure.cs">
+      <Link>Helpers\Ensure.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Helpers\IOpenWeatherMapRequest.cs">
+      <Link>Helpers\IOpenWeatherMapRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Helpers\OpenWeatherMapRequest.cs">
+      <Link>Helpers\OpenWeatherMapRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\IOpenWeatherMapClient.cs">
+      <Link>IOpenWeatherMapClient.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\City.cs">
+      <Link>Models\Common\City.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Clouds.cs">
+      <Link>Models\Common\Clouds.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Coordinates.cs">
+      <Link>Models\Common\Coordinates.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Direction.cs">
+      <Link>Models\Common\Direction.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Humidity.cs">
+      <Link>Models\Common\Humidity.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\LastUpdate.cs">
+      <Link>Models\Common\LastUpdate.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\MetricSystem.cs">
+      <Link>Models\Common\MetricSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\OpenWeatherMapLanguage.cs">
+      <Link>Models\Common\OpenWeatherMapLanguage.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Precipitation.cs">
+      <Link>Models\Common\Precipitation.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Pressure.cs">
+      <Link>Models\Common\Pressure.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Speed.cs">
+      <Link>Models\Common\Speed.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Sun.cs">
+      <Link>Models\Common\Sun.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Temperature.cs">
+      <Link>Models\Common\Temperature.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Weather.cs">
+      <Link>Models\Common\Weather.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\WeatherItem.cs">
+      <Link>Models\Common\WeatherItem.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Common\Wind.cs">
+      <Link>Models\Common\Wind.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\CurrentWeather\CurrentWeatherResponse.cs">
+      <Link>Models\CurrentWeather\CurrentWeatherResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\CityLocation.cs">
+      <Link>Models\Forecast\CityLocation.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\ForecastClouds.cs">
+      <Link>Models\Forecast\ForecastClouds.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\ForecastData.cs">
+      <Link>Models\Forecast\ForecastData.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\ForecastPrecipitation.cs">
+      <Link>Models\Forecast\ForecastPrecipitation.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\ForecastResponse.cs">
+      <Link>Models\Forecast\ForecastResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\ForecastTime.cs">
+      <Link>Models\Forecast\ForecastTime.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\Location.cs">
+      <Link>Models\Forecast\Location.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\Meta.cs">
+      <Link>Models\Forecast\Meta.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\Symbol.cs">
+      <Link>Models\Forecast\Symbol.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\WindDirection.cs">
+      <Link>Models\Forecast\WindDirection.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Forecast\WindSpeed.cs">
+      <Link>Models\Forecast\WindSpeed.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Search\Accuracy.cs">
+      <Link>Models\Search\Accuracy.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Search\SearchResponse.cs">
+      <Link>Models\Search\SearchResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\Models\Search\SearchResult.cs">
+      <Link>Models\Search\SearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\OpenWeatherMap\OpenWeatherMapClient.cs">
+      <Link>OpenWeatherMapClient.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\OpenWeatherMap\OpenWeatherMap.snk">
+      <Link>OpenWeatherMap.snk</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

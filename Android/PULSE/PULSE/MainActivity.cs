@@ -29,6 +29,11 @@ namespace PULSE
 
 			Speech.Speak("Hello, " + Account.CurrentUser.FirstName);
 		}
+
+		void CardHandler(Card CurrentCard)
+		{
+			CurrentCard.Speak();
+		}
 	}
 }
 

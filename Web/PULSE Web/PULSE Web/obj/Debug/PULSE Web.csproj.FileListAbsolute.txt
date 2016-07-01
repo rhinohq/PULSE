@@ -58,3 +58,64 @@ C:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Http.xml
 C:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Http.WebHost.xml
 C:\PULSE\Web\PULSE Web\PULSE Web\obj\Debug\PULSE Web.dll
 C:\PULSE\Web\PULSE Web\PULSE Web\obj\Debug\PULSE Web.pdb
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\csc.exe
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\csc.exe.config
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\csc.rsp
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\csi.exe
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\csi.rsp
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\System.AppContext.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\System.Collections.Immutable.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\System.IO.FileSystem.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\vbc.exe
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\vbc.exe.config
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\vbc.rsp
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\VBCSCompiler.exe
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\roslyn\VBCSCompiler.exe.config
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\PULSE Web.dll.config
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\PULSE Web.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\PULSE Web.pdb
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\AuthenticationLib.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\EntityFramework.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\EntityFramework.SqlServer.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\Microsoft.Web.Infrastructure.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\Newtonsoft.Json.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Net.Http.Formatting.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Helpers.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Http.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Http.WebHost.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Mvc.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Razor.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Webpages.Deployment.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Webpages.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Webpages.Razor.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\AuthenticationLib.pdb
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\EntityFramework.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\EntityFramework.SqlServer.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\Newtonsoft.Json.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Razor.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Webpages.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Webpages.Deployment.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Webpages.Razor.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Helpers.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Mvc.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Net.Http.Formatting.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Http.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\bin\System.Web.Http.WebHost.xml
+D:\PULSE\Web\PULSE Web\PULSE Web\obj\Debug\PULSE Web.csprojResolveAssemblyReference.cache
+D:\PULSE\Web\PULSE Web\PULSE Web\obj\Debug\PULSE Web.dll
+D:\PULSE\Web\PULSE Web\PULSE Web\obj\Debug\PULSE Web.pdb

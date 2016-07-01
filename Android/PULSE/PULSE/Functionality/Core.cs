@@ -4,12 +4,19 @@ using System.Linq;
 using System.Text.RegularExpressions;
 
 using Android.Content;
+using Android.Content.PM;
 using Android.Bluetooth;
-using Android.Net;
+using Android.Graphics;
 using Android.Provider;
 using Android.Widget;
 
+using Java.IO;
+
+using Environment = Android.OS.Environment;
+using Uri = Android.Net.Uri;
+
 using Plugin.CurrentActivity;
+using Plugin.Battery;
 using Plugin.Messaging;
 
 namespace PULSE
@@ -18,6 +25,23 @@ namespace PULSE
 	{
 		public static class Device
 		{
+			public static class Battery
+			{
+				public static Card GetBatteryLevel()
+				{
+					return new Card{
+						TextToSpeak = "Battery is at " + CrossBattery.Current.RemainingChargePercent + " percent."
+					};
+				}
+
+				public static Card GetBatteryStatus()
+				{
+					return new Card{
+						TextToSpeak = "The battery is " + CrossBattery.Current.Status + "."
+					};
+				}
+			}
+
 			public static class Bluetooth
 			{ 
 				public static void TurnBluetoothOn()
@@ -56,7 +80,7 @@ namespace PULSE
 
 					int NetID;
 					var Network = WifiMan.ConfiguredNetworks.FirstOrDefault(cn => cn.Ssid == SSID);
-					90
+
 					if (Network != null)
 						NetID = Network.NetworkId;
 					else 
@@ -80,8 +104,61 @@ namespace PULSE
 			}
 
 			public static class GPS
-			{ 
-				
+			{
+				public static void TurnOnGPS()
+				{
+					GeoMaps.FindPostion();
+				}
+			}
+
+			public static class Camera
+			{
+				public static void OpenCamera()
+				{
+					if (!IsThereAnAppToTakePictures())
+						throw new Exceptions.CameraNotFoundException();
+
+					TakeAPicture();
+				}
+
+				public static void ToggleFlashlight()
+				{
+					// TODO: Toggle Flashlight
+				}
+
+				static bool IsThereAnAppToTakePictures()  
+				{
+					Intent intent = new Intent(MediaStore.ActionImageCapture);
+					IList<ResolveInfo> availableActivities = CrossCurrentActivity.Current.Activity.PackageManager.QueryIntentActivities(intent, PackageInfoFlags.MatchDefaultOnly);
+					
+					return availableActivities != null && availableActivities.Count > 0;
+				}
+
+				static void CreateDirectoryForPictures()
+				{
+					Pic.Dir = new File(Environment.GetExternalStoragePublicDirectory(Environment.DirectoryPictures), "PULSE");
+
+					if (!Pic.Dir.Exists())
+						Pic.Dir.Mkdirs();
+				}
+
+				static void TakeAPicture()
+				{
+					Intent Intent = new Intent(MediaStore.ActionImageCapture);
+
+					Pic.File = new File(Pic.Dir, string.Format("PULSEPic_{0}.jpg", Guid.NewGuid()));
+
+					Intent.PutExtra(MediaStore.ExtraOutput, Uri.FromFile(Pic.File));
+
+					CrossCurrentActivity.Current.Activity.StartActivityForResult(Intent, 0);
+				}
+
+				public static class Pic
+				{
+					public static File File;
+					public static File Dir;
+					public static Bitmap BMP;
+				}
 			}
 		}
 
@@ -140,16 +217,25 @@ namespace PULSE
 					throw new Exceptions.ContactNotFoundException();
 				}
 			}
+		}
 
-			public class Exceptions
+		public static class Exceptions
+		{
+			public class ContactNotFoundException : Exception
 			{
-				public class ContactNotFoundException : Exception
+				public ContactNotFoundException()
+					: base("PULSE could not find that contact")
 				{
-					public ContactNotFoundException()
-						: base("PULSE could not find that contact")
-					{ 
-						
-					}
+
+				}
+			}
+
+			public class CameraNotFoundException : Exception
+			{
+				public CameraNotFoundException()
+					: base("PULSE could not find a camera")
+				{
+
 				}
 			}
 		}

@@ -22,9 +22,11 @@ namespace PULSE_Web.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
+        public char Gender { get; set; }
         public string PhoneNum { get; set; }
         public string PasswordHash { get; set; }
         public virtual ICollection<Device> Devices { get; set; }
+        public string AccountType { get; set; }
     }
 
     public class Device

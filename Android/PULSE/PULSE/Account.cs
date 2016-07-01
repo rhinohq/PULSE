@@ -66,7 +66,10 @@ namespace PULSE
 		}
 
 		public static bool CheckUser()
-		{ 
+		{
+			if (CurrentUser.Username == null)
+				return false;
+
 			WebClient Client = new WebClient();
 			string Request = AuthURL + CurrentUser.Username + "/" + CurrentUser.PasswordHash;
 			string Response = Client.DownloadString(Request);
@@ -89,9 +92,11 @@ namespace PULSE
 			public string LastName { get; set; }
 			public string Username { get; set; }
 			public string Email { get; set; }
+			public char Gender { get; set; }
 			public string PhoneNum { get; set; }
 			public string PasswordHash { get; set; }
 			public virtual ICollection<Device> Devices { get; set; }
+			public string AccountType { get; set; }
 		}
 
 		public class Device

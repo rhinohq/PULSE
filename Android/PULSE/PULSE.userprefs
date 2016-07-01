@@ -1,31 +1,21 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupItem="PULSE\PULSE.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.PULSE AndroidDesignerPreferredDevice="Nexus 5" AndroidDesignerPreferredTheme="Theme.Custom" PreferredExecutionTarget="Android.000a677c" />
+  <MonoDevelop.Ide.ItemProperties.PULSE AndroidDesignerPreferredDevice="Nexus 5" AndroidDesignerPreferredTheme="Theme.Custom" PreferredExecutionTarget="Android.Nexus_5_API_22_x86" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="PULSE\Card.cs">
     <Files>
-      <File FileName="PULSE\MainActivity.cs" Line="21" Column="4" />
-      <File FileName="PULSE\Account.cs" Line="54" Column="7" />
-      <File FileName="PULSE\Data.cs" Line="86" Column="3" />
-      <File FileName="PULSE\LoginActivity.cs" Line="1" Column="1" />
+      <File FileName="PULSE\MainActivity.cs" Line="37" Column="3" />
+      <File FileName="PULSE\Account.cs" Line="32" Column="64" />
+      <File FileName="PULSE\Data.cs" Line="75" Column="30" />
+      <File FileName="PULSE\LoginActivity.cs" Line="36" Column="64" />
       <File FileName="PULSE\Speech.cs" Line="17" Column="53" />
-      <File FileName="PULSE\Functionality\Core.cs" Line="39" Column="75" />
+      <File FileName="PULSE\Functionality\Core.cs" Line="37" Column="23" />
+      <File FileName="PULSE\Functionality\WebServices.cs" Line="53" Column="70" />
+      <File FileName="PULSE\Functionality\GeoMaps.cs" Line="1" Column="1" />
+      <File FileName="PULSE\Card.cs" Line="9" Column="30" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="PULSE" expanded="True">
-            <Node name="PULSE" expanded="True">
-              <Node name="ComponentReferenceFolder" expanded="True" selected="True" />
-              <Node name="Functionality" expanded="True" />
-              <Node name="Properties" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
 </Properties>
