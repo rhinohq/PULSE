@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Net;
+using System.Runtime.Serialization.Formatters.Binary;
 
 using Android.Content;
+using Android.Graphics;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -80,6 +83,40 @@ namespace PULSE
 				return false;
 		}
 
+		public static class Photo
+		{
+			public static byte[] ConvertBitmapToByteArray(Bitmap BMP)
+			{
+				if (BMP == null)
+					return null;
+
+				BinaryFormatter BF = new BinaryFormatter();
+
+				using (MemoryStream MS = new MemoryStream())
+				{
+					BF.Serialize(MS, BMP);
+
+					return MS.ToArray();
+				}
+			}
+
+			public static Bitmap ConvertByteArrayToBitmap(byte[] BMP)
+			{ 
+				if (BMP == null)
+					return null;
+
+				BinaryFormatter BF = new BinaryFormatter();
+
+				using (MemoryStream MS = new MemoryStream())
+				{ 
+					MS.Write(BMP, 0, BMP.Length);
+					MS.Seek(0, SeekOrigin.Begin);
+
+					return (Bitmap)BF.Deserialize(MS);
+				}
+			}
+		}
+
 		class AuthUser
 		{
 			public string Username { get; set; }
@@ -95,6 +132,7 @@ namespace PULSE
 			public char Gender { get; set; }
 			public string PhoneNum { get; set; }
 			public string PasswordHash { get; set; }
+			public static byte[] ProfilePicture { get; set; }
 			public virtual ICollection<Device> Devices { get; set; }
 			public string AccountType { get; set; }
 		}
@@ -102,6 +140,7 @@ namespace PULSE
 		public class Device
 		{
 			public string PublicKey { get; set; }
+			public string Name { get; set; }
 		}
 	}
 }

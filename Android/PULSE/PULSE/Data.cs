@@ -88,12 +88,16 @@ namespace PULSE
 			public char Gender { get; set; }
 			public string PhoneNum { get; set; }
 			public string PasswordHash { get; set; }
+			public static byte[] ProfilePicture { get; set; }
 			public string AccountType { get; set; }
 		}
 
 		class Device
 		{ 
+			[PrimaryKey]
 			public string PublicKey { get; set; }
+
+			public string Name { get; set; }
 		}
 	}
 }

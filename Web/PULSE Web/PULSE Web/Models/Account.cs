@@ -1,7 +1,13 @@
 ﻿using AuthenticationLib;
 
 using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 
@@ -10,6 +16,7 @@ namespace PULSE_Web.Models
     public static class Account
     {
         private static UserDBEntities UserDB = new UserDBEntities();
+        public static Dictionary<string, string> AccountTypes = new Dictionary<string, string>();
 
         public static void AddCookie(string Username, string Password, HttpResponseBase Response, bool RememberMe)
         {
@@ -36,6 +43,22 @@ namespace PULSE_Web.Models
             }
         }
 
+        public static User CreateNewUser(User NewUser)
+        {
+            User user = UserDB.Users.Where(x => x.Username == NewUser.Username).FirstOrDefault();
+
+            if (user != null)
+                return new User();
+
+            NewUser.PasswordHash = Authentication.HashCredentials(NewUser.Email, NewUser.PasswordHash);
+            NewUser.AccountType = AccountTypes["Standard"];
+
+            UserDB.Users.Add(NewUser);
+            UserDB.SaveChangesAsync();
+
+            return NewUser;
+        }
+
         public static void DeleteUser(string Username, string Password)
         {
             User user = UserDB.Users.Where(x => x.Username == Username).FirstOrDefault();
@@ -57,6 +80,15 @@ namespace PULSE_Web.Models
                 return Cookie["Username"];
             else
                 return null;
+        }
+
+        public static void SetupAccountTypes()
+        {
+            SHA512 Hash = SHA512.Create();
+
+            AccountTypes.Add("Admin", Convert.ToBase64String(Hash.ComputeHash(Encoding.UTF8.GetBytes("Admin"))));
+            AccountTypes.Add("Standard", Convert.ToBase64String(Hash.ComputeHash(Encoding.UTF8.GetBytes("Standard"))));
+            AccountTypes.Add("Pro", Convert.ToBase64String(Hash.ComputeHash(Encoding.UTF8.GetBytes("Pro"))));
         }
 
         public static void RemoveCookie(HttpRequest Request)
@@ -128,6 +160,27 @@ namespace PULSE_Web.Models
                 return true;
             else
                 return false;
+        }
+
+        public static class Photo
+        {
+            public static byte[] ImageToByteArray(Image Image)
+            {
+                MemoryStream MemStream = new MemoryStream();
+
+                Image.Save(MemStream, ImageFormat.Gif);
+
+                return MemStream.ToArray();
+            }
+
+            public static Image ByteArrayToImage(byte[] ByteArray)
+            {
+                MemoryStream MemStream = new MemoryStream(ByteArray);
+
+                Image Image = Image.FromStream(MemStream);
+
+                return Image;
+            }
         }
     }
 }

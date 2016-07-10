@@ -25,6 +25,7 @@ namespace PULSE_Web.Models
         public char Gender { get; set; }
         public string PhoneNum { get; set; }
         public string PasswordHash { get; set; }
+        public byte[] ProfilePicture { get; set; }
         public virtual ICollection<Device> Devices { get; set; }
         public string AccountType { get; set; }
     }
@@ -33,5 +34,6 @@ namespace PULSE_Web.Models
     {
         [Key]
         public string PublicKey { get; set; }
+        public string Name { get; set; }
     }
 }

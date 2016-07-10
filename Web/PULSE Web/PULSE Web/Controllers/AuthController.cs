@@ -12,12 +12,6 @@ namespace PULSE_Web.Controllers
     {
         private static UserDBEntities UserDB = new UserDBEntities();
 
-        // GET api/<controller>
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
         // GET api/<controller>/{user}/{hash}
         [HttpGet]
         public bool Get(string username, string passwordhash)
@@ -44,16 +38,6 @@ namespace PULSE_Web.Controllers
             }
             else
                 return new User();
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
         }
 
         public class AuthRequest

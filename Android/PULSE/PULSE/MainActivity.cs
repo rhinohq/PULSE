@@ -30,9 +30,10 @@ namespace PULSE
 			Speech.Speak("Hello, " + Account.CurrentUser.FirstName);
 		}
 
-		void CardHandler(Card CurrentCard)
+		void CardHandler(Card CurrentCard, bool SpeakToUser)
 		{
-			CurrentCard.Speak();
+			if (SpeakToUser)
+				CurrentCard.Speak();
 		}
 	}
 }
