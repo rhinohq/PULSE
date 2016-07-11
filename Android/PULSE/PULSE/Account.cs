@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Runtime.Serialization.Formatters.Binary;
 
 using Android.Content;
 using Android.Graphics;
+using Android.Widget;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -18,13 +21,15 @@ namespace PULSE
 	public static class Account
 	{
 		public static User CurrentUser { get; set; }
-		const string AuthURL = "https://mypulse.me/api/auth/";
-		const string TokenURL = "https://mypulse.me/api/token/";
+		const string AuthURL = "http://mypulse.me/api/auth/";
+		const string TokenURL = "http://mypulse.me/api/token/";
+		const string UserURL = "http://mypulse.me/api/user/";
 
 		public static bool Login(string Username, string Password)
 		{
 			WebClient Client = new WebClient();
 			string PasswordHash = Authentication.HashCredentials(Username, Password);
+			User User;
 
 			AuthUser AuthUser = new AuthUser
 			{
@@ -36,10 +41,17 @@ namespace PULSE
 			JSONSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 			string Data = JsonConvert.SerializeObject(AuthUser, JSONSettings);
 
-			Client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
-			string Response = Client.UploadString(AuthURL, Data);
+			try
+			{
+				Client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+				string Response = Client.UploadString(AuthURL, Data);
 
-			User User = (User)JsonConvert.DeserializeObject(Response, JSONSettings);
+				User = (User)JsonConvert.DeserializeObject(Response, JSONSettings);
+			}
+			catch
+			{
+				User = new User();
+			}
 
 			if (User.Username == null)
 				return false;
@@ -50,15 +62,30 @@ namespace PULSE
 			return true;
 		}
 
-		public static void SignUp()
+		public static User SignUp(User NewUser)
 		{ 
-			Android.Net.Uri URI = Android.Net.Uri.Parse("https://mypulse.me/SignUp/");
-			Intent Intent = new Intent(Intent.ActionView);
-			Intent.SetData(URI);
+			WebClient Client = new WebClient();
+			User User;
 
-			Intent Open = Intent.CreateChooser(Intent, "Open with");
+			JsonSerializerSettings JSONSettings = new JsonSerializerSettings();
+			JSONSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+			string Data = JsonConvert.SerializeObject(NewUser, JSONSettings);
 
-			CrossCurrentActivity.Current.Activity.StartActivity(Open);
+			try
+			{
+				Client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+				string Response = Client.UploadString(UserURL, Data);
+
+				User = (User)JsonConvert.DeserializeObject(Response, JSONSettings);
+			}
+			catch
+			{
+				Toast.MakeText(CrossCurrentActivity.Current.Activity, "Error connecting to server", ToastLength.Short).Show();
+
+				User = new User();
+			}
+
+			return User;
 		}
 
 		public static void LogOut()
@@ -75,12 +102,66 @@ namespace PULSE
 
 			WebClient Client = new WebClient();
 			string Request = AuthURL + CurrentUser.Username + "/" + CurrentUser.PasswordHash;
-			string Response = Client.DownloadString(Request);
+			string Response = "";
+
+			try
+			{
+				Response = Client.DownloadString(Request);
+			}
+			catch
+			{ 
+				Toast.MakeText(CrossCurrentActivity.Current.Activity, "Error connecting to server", ToastLength.Short).Show();
+			}
 
 			if (Response == "true")
 				return true;
 			else
 				return false;
+		}
+
+		public static bool Validation(string Data, char FieldType)
+		{
+			bool Validated = false;
+
+			switch (FieldType)
+			{
+				case 'n':
+					Regex NameValidator = new Regex("[a-zA-Z'-]", RegexOptions.Compiled);
+
+					Validated = NameValidator.IsMatch(Data);
+
+					break;
+
+				case 'e':
+					Regex EmailValidator = new Regex("^[a-zA-Z_0-9]+([-+.'][a-zA-Z_0-9]+)*@[a-zA-Z_0-9]+([-.][a-zA-Z_0-9]+)*.[a-zA-Z_0-9]+([-.][a-zA-Z_0-9]+)*$", RegexOptions.Compiled);
+
+					Validated = EmailValidator.IsMatch(Data);
+
+					break;
+
+				case 'u':
+					Regex UsernameValidator = new Regex("[a-zA-Z0-9'-_.]", RegexOptions.Compiled);
+
+					Validated = UsernameValidator.IsMatch(Data);
+
+					break;
+
+				case 'p':
+					Regex NumValidator = new Regex("[0-9]", RegexOptions.Compiled);
+
+					Validated = NumValidator.IsMatch(Data);
+
+					break;
+
+				case 'd':
+					Regex DateValidator = new Regex("^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)", RegexOptions.Compiled);
+
+					Validated = (DateValidator.IsMatch(Data) || Convert.ToInt32(Data.Substring(Data.Length - 4)) <= 2016);
+
+					break;
+			}
+
+			return Validated;
 		}
 
 		public static class Photo
@@ -131,6 +212,7 @@ namespace PULSE
 			public string Email { get; set; }
 			public char Gender { get; set; }
 			public string PhoneNum { get; set; }
+			public string DOB { get; set; }
 			public string PasswordHash { get; set; }
 			public static byte[] ProfilePicture { get; set; }
 			public virtual ICollection<Device> Devices { get; set; }

@@ -15,7 +15,7 @@ namespace PULSE_Web.Models
 {
     public static class Account
     {
-        private static UserDBEntities UserDB = new UserDBEntities();
+        private static PULSEUserDB UserDB = new PULSEUserDB();
         public static Dictionary<string, string> AccountTypes = new Dictionary<string, string>();
 
         public static void AddCookie(string Username, string Password, HttpResponseBase Response, bool RememberMe)
@@ -123,6 +123,13 @@ namespace PULSE_Web.Models
                     Regex UsernameValidator = new Regex("[a-zA-Z0-9'-_.]", RegexOptions.Compiled);
 
                     Validated = UsernameValidator.IsMatch(Data);
+
+                    break;
+
+                case 'p':
+                    Regex NumValidator = new Regex("[0-9]", RegexOptions.Compiled);
+
+                    Validated = NumValidator.IsMatch(Data);
 
                     break;
             }

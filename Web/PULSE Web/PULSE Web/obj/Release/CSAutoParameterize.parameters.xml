@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="PULSEUserDB-Web.config Connection String" description="PULSEUserDB Connection String used in web.config by the application to access the database." defaultValue="Data Source=RYAN-WEB;Initial Catalog=PULSEUserDB;Integrated Security=True;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\PULSE\\Web\\PULSE\ Web\\PULSE\ Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PULSEUserDB']/@connectionString" />
+  </parameter>
+</parameters>

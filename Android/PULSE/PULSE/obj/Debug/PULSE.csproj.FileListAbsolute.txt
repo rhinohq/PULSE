@@ -244,6 +244,7 @@ D:\PULSE\Android\PULSE\PULSE\obj\Debug\res\layout\login.xml
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\res\values\theme.xml
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\res\drawable\buttonsigninstyle.xml
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\res\drawable\progressbarstyle.xml
+D:\PULSE\Android\PULSE\PULSE\obj\Debug\res\layout\signup.xml
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\R.cs.flag
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\uploadflags.txt
 D:\PULSE\Android\PULSE\PULSE\bin\Debug\PULSE.dll.mdb
@@ -298,6 +299,5 @@ D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Mono.CSharp.dll.mdb
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\System.ServiceModel.dll.mdb
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\System.Net.dll.mdb
-D:\PULSE\Android\PULSE\PULSE\obj\Debug\PULSE.csprojResolveAssemblyReference.cache
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\PULSE.dll.mdb
 D:\PULSE\Android\PULSE\PULSE\bin\Debug\PULSE.dll.mdb

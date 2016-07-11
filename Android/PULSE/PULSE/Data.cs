@@ -24,6 +24,7 @@ namespace PULSE
 				Email = User.Email,
 				Gender = User.Gender,
 				PhoneNum = User.PhoneNum,
+				DOB = User.DOB,
 				PasswordHash = User.PasswordHash,
 				AccountType = User.AccountType
 			});
@@ -62,6 +63,7 @@ namespace PULSE
 				User.Email = DBUser.Email;
 				User.Gender = DBUser.Gender;
 				User.PhoneNum = DBUser.PhoneNum;
+				User.DOB = DBUser.DOB;
 				User.PasswordHash = DBUser.PasswordHash;
 				User.AccountType = DBUser.AccountType;
 
@@ -87,6 +89,7 @@ namespace PULSE
 			public string Email { get; set; }
 			public char Gender { get; set; }
 			public string PhoneNum { get; set; }
+			public string DOB { get; set; }
 			public string PasswordHash { get; set; }
 			public static byte[] ProfilePicture { get; set; }
 			public string AccountType { get; set; }

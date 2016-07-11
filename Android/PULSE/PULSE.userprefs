@@ -1,21 +1,19 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupItem="PULSE\PULSE.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.PULSE AndroidDesignerPreferredDevice="Nexus 5" AndroidDesignerPreferredTheme="Theme.Custom" PreferredExecutionTarget="Android.5&quot; KitKat (4.4) XXHDPI Phone" />
+  <MonoDevelop.Ide.ItemProperties.PULSE AndroidDesignerPreferredDevice="Nexus 5" AndroidDesignerPreferredTheme="Theme.Custom" PreferredExecutionTarget="Android.000a677c" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\PULSE\Android\PULSE\PULSE\Account.cs" line="72" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="PULSE\Account.cs">
     <Files>
-      <File FileName="PULSE\MainActivity.cs" Line="13" Column="41" />
-      <File FileName="PULSE\Account.cs" Line="86" Column="42" />
-      <File FileName="PULSE\Data.cs" Line="98" Column="41" />
-      <File FileName="PULSE\LoginActivity.cs" Line="36" Column="64" />
-      <File FileName="PULSE\Speech.cs" Line="17" Column="53" />
-      <File FileName="PULSE\Functionality\Core.cs" Line="37" Column="23" />
-      <File FileName="PULSE\Functionality\WebServices.cs" Line="53" Column="70" />
-      <File FileName="PULSE\Functionality\GeoMaps.cs" Line="1" Column="1" />
-      <File FileName="PULSE\Card.cs" Line="12" Column="2" />
+      <File FileName="PULSE\MainActivity.cs" Line="19" Column="22" />
+      <File FileName="PULSE\Account.cs" Line="109" Column="46" />
+      <File FileName="PULSE\Data.cs" Line="37" Column="8" />
+      <File FileName="PULSE\SignUpActivity.cs" Line="54" Column="27" />
+      <File FileName="PULSE\LoginActivity.cs" Line="36" Column="73" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

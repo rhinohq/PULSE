@@ -132,6 +132,7 @@
     <Compile Include="Functionality\GeoMaps.cs" />
     <Compile Include="Functionality\WebServices.cs" />
     <Compile Include="Card.cs" />
+    <Compile Include="SignUpActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -151,6 +152,7 @@
     <AndroidResource Include="Resources\values\theme.xml" />
     <AndroidResource Include="Resources\drawable\ButtonSignInStyle.xml" />
     <AndroidResource Include="Resources\drawable\ProgressBarStyle.xml" />
+    <AndroidResource Include="Resources\layout\SignUp.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

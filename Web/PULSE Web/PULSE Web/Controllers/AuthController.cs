@@ -10,7 +10,7 @@ namespace PULSE_Web.Controllers
 {
     public class AuthController : ApiController
     {
-        private static UserDBEntities UserDB = new UserDBEntities();
+        private static PULSEUserDB UserDB = new PULSEUserDB();
 
         // GET api/<controller>/{user}/{hash}
         [HttpGet]

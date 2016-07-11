@@ -14,6 +14,10 @@ PULSE.MainApplication, PULSE;md5cc501f784a6cd5f3a0f90bae8a4cdf87.MainApplication
 PULSE.MainApplication, PULSE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cc501f784a6cd5f3a0f90bae8a4cdf87.MainApplication
 PULSE.MainApplication;md5cc501f784a6cd5f3a0f90bae8a4cdf87.MainApplication
 pulse.MainApplication;md5cc501f784a6cd5f3a0f90bae8a4cdf87.MainApplication
+PULSE.SignUpActivity, PULSE;md5cc501f784a6cd5f3a0f90bae8a4cdf87.SignUpActivity
+PULSE.SignUpActivity, PULSE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5cc501f784a6cd5f3a0f90bae8a4cdf87.SignUpActivity
+PULSE.SignUpActivity;md5cc501f784a6cd5f3a0f90bae8a4cdf87.SignUpActivity
+pulse.SignUpActivity;md5cc501f784a6cd5f3a0f90bae8a4cdf87.SignUpActivity
 Plugin.Battery.BatteryBroadcastReceiver, Plugin.Battery;md55f1abaaf71dce7b9d02a3561240c868e.BatteryBroadcastReceiver
 Plugin.Battery.BatteryBroadcastReceiver, Plugin.Battery, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null;md55f1abaaf71dce7b9d02a3561240c868e.BatteryBroadcastReceiver
 Plugin.Battery.BatteryBroadcastReceiver;md55f1abaaf71dce7b9d02a3561240c868e.BatteryBroadcastReceiver

@@ -2,6 +2,8 @@
 using Android.Widget;
 using Android.OS;
 
+using System.Threading;
+
 namespace PULSE
 {
 	[Activity(Label = "PULSE", MainLauncher = true, Icon = "@mipmap/icon")]
@@ -22,10 +24,8 @@ namespace PULSE
 
 		void Startup()
 		{ 
-			Core.GSM.GetContacts();
-
-			GeoMaps.CurrentPosition = GeoMaps.FindPostion();
-			GeoMaps.CurrentLocation = GeoMaps.GetLocation();
+			Thread Contacts = new Thread(Core.GSM.GetContacts);
+			Thread Location = new Thread(FindLocation);
 
 			Speech.Speak("Hello, " + Account.CurrentUser.FirstName);
 		}
@@ -34,6 +34,12 @@ namespace PULSE
 		{
 			if (SpeakToUser)
 				CurrentCard.Speak();
+		}
+
+		void FindLocation()
+		{ 
+			GeoMaps.CurrentPosition = GeoMaps.FindPostion();
+			GeoMaps.CurrentLocation = GeoMaps.GetLocation();
 		}
 	}
 }

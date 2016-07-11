@@ -14,14 +14,14 @@ namespace PULSE
 
 			SetContentView(Resource.Layout.Login);
 
-			TextView txt_Username = FindViewById<TextView>(Resource.Id.txtUsername);
-			TextView txt_Password = FindViewById<TextView>(Resource.Id.txtPassword);
+			TextView txt_Username = FindViewById<TextView>(Resource.Id.txtUsernameIn);
+			TextView txt_Password = FindViewById<TextView>(Resource.Id.txtPasswordIn);
 			Button but_login = FindViewById<Button>(Resource.Id.btnLogIn);
 			TextView txt_signup = FindViewById<TextView>(Resource.Id.txtSignUp);
-			ProgressBar pbr_Progress = FindViewById<ProgressBar>(Resource.Id.pbr_SignIn);
+			ProgressBar pbr_Progress = FindViewById<ProgressBar>(Resource.Id.pbrSignIn);
 
 			txt_signup.Click += delegate {
-				Account.SignUp();
+				StartActivity(typeof(SignUpActivity));
 			};
 
 			but_login.Click += delegate {
