@@ -57,6 +57,10 @@ namespace PULSE
 				}
 			}
 
+			public static class Media 
+			{ 
+			}
+
 			public static class WiFi
 			{
 				static Android.Net.Wifi.WifiManager WifiMan = (Android.Net.Wifi.WifiManager)CrossCurrentActivity.Current.Activity.GetSystemService("wifi");

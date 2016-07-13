@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace PULSE
 {
-	[Activity(Label = "SignUpActivity")]
+	[Activity(Label = "Sign Up")]
 	public class SignUpActivity : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -56,7 +56,7 @@ namespace PULSE
 						DOB = txt_DOB.Text
 					};
 
-					Account.SignUp(NewUser);
+					StoreAccount.StoreUser(Account.SignUp(NewUser));
 				}
 			};
 		}
