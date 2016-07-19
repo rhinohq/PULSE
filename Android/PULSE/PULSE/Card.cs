@@ -6,7 +6,7 @@
 
 		public void Speak()
 		{
-			Speech.Speak(TextToSpeak);
+			Speech.Speak(TextToSpeak ?? "");
 		}
 	}
 }

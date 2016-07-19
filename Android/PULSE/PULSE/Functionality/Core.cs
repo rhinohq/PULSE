@@ -7,6 +7,8 @@ using Android.Content;
 using Android.Content.PM;
 using Android.Bluetooth;
 using Android.Graphics;
+using Android.Media;
+using Android.Net.Wifi;
 using Android.Provider;
 using Android.Widget;
 
@@ -58,12 +60,28 @@ namespace PULSE
 			}
 
 			public static class Media 
-			{ 
+			{
+				static MediaPlayer Player = new MediaPlayer();
+
+				public static void StartPlayback()
+				{
+					Player.Start();
+				}
+
+				public static void PausePlayback()
+				{
+					Player.Pause();
+				}
+
+				public static void StopPlayback()
+				{
+					Player.Stop();
+				}
 			}
 
 			public static class WiFi
 			{
-				static Android.Net.Wifi.WifiManager WifiMan = (Android.Net.Wifi.WifiManager)CrossCurrentActivity.Current.Activity.GetSystemService("wifi");
+				static WifiManager WifiMan = (WifiManager)CrossCurrentActivity.Current.Activity.GetSystemService("wifi");
 
 				public static void ToggleWiFi(bool OnOff)
 				{
@@ -75,7 +93,7 @@ namespace PULSE
 
 				public static void ConnectToNework(string SSID, string Key)
 				{ 
-					var WifiConfig = new Android.Net.Wifi.WifiConfiguration();
+					var WifiConfig = new WifiConfiguration();
 
 					WifiConfig.Ssid = string.Format("\"{0}\"", SSID);
 					WifiConfig.PreSharedKey = string.Format("\"{0}\"", Key);

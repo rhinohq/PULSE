@@ -28,7 +28,7 @@
     </activity>
     <activity android:label="Login" android:name="md5cc501f784a6cd5f3a0f90bae8a4cdf87.LoginActivity" />
     <activity android:label="Sign Up" android:name="md5cc501f784a6cd5f3a0f90bae8a4cdf87.SignUpActivity" />
-    <receiver android:enabled="true" android:label="Connectivity Plugin Broadcast Receiver" android:name="md546bf78c6c1ea5df684f3f928d8d05883.ConnectivityChangeBroadcastReceiver" />
+    <receiver android:enabled="true" android:label="Connectivity Plugin Broadcast Receiver" android:name="md5ebcbedcc9f4271e586379ac7977363a7.ConnectivityChangeBroadcastReceiver" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.pulse.pulse.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">
