@@ -150,7 +150,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\Login.axml" />
     <AndroidResource Include="Resources\values\theme.xml" />
-    <AndroidResource Include="Resources\drawable\ButtonSignInStyle.xml" />
     <AndroidResource Include="Resources\drawable\ProgressBarStyle.xml" />
     <AndroidResource Include="Resources\layout\SignUp.axml" />
   </ItemGroup>

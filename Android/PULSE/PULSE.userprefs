@@ -1,21 +1,21 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupItem="PULSE\PULSE.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.PULSE AndroidDesignerPreferredDevice="Nexus 5" AndroidDesignerPreferredTheme="Theme.Custom" PreferredExecutionTarget="Android.5&quot; KitKat (4.4) XXHDPI Phone" />
+  <MonoDevelop.Ide.ItemProperties.PULSE AndroidDesignerPreferredDevice="Nexus 5" AndroidDesignerPreferredTheme="Theme.Custom" PreferredExecutionTarget="Android.Nexus_5_API_22_x86" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="D:\PULSE\Android\PULSE\PULSE\Account.cs" line="72" column="1" />
-      <Breakpoint file="D:\PULSE\Android\PULSE\PULSE\Account.cs" line="77" column="1" />
+      <Breakpoint file="D:\PULSE\Android\PULSE\PULSE\Account.cs" line="71" column="1" />
+      <Breakpoint file="D:\PULSE\Android\PULSE\PULSE\Account.cs" line="76" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="PULSE\LoginActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PULSE\Resources\Resource.designer.cs">
     <Files>
-      <File FileName="PULSE\MainActivity.cs" Line="19" Column="22" />
-      <File FileName="PULSE\Account.cs" Line="93" Column="16" />
-      <File FileName="PULSE\Data.cs" Line="37" Column="8" />
-      <File FileName="PULSE\SignUpActivity.cs" Line="59" Column="18" />
+      <File FileName="PULSE\MainActivity.cs" Line="47" Column="28" />
+      <File FileName="PULSE\Account.cs" Line="9" Column="22" />
+      <File FileName="PULSE\SignUpActivity.cs" Line="1" Column="1" />
       <File FileName="PULSE\LoginActivity.cs" Line="8" Column="26" />
-      <File FileName="PULSE\Functionality\Core.cs" Line="30" Column="41" />
+      <File FileName="PULSE\Card.cs" Line="18" Column="4" />
+      <File FileName="PULSE\Resources\Resource.designer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

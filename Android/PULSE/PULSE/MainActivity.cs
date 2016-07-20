@@ -34,6 +34,20 @@ namespace PULSE
 		{
 			if (SpeakToUser)
 				CurrentCard.Speak();
+
+			switch (CurrentCard.CardType)
+			{
+				case CardType.Text:
+					break;
+				case CardType.Image:
+					break;
+				case CardType.Video:
+					break;
+				case CardType.WebView:
+					string Url = "file:///" + CurrentCard.CardUrl;
+
+					break;
+			}
 		}
 
 		void FindLocation()

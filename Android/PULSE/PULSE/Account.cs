@@ -5,7 +5,6 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Runtime.Serialization.Formatters.Binary;
 
-using Android.Content;
 using Android.Graphics;
 using Android.Widget;
 

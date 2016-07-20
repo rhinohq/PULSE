@@ -44,8 +44,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:id="@+id/btnLogIn"
-        android:hapticFeedbackEnabled="true"
-        android:background="@drawable/ButtonSignInStyle" />
+        android:hapticFeedbackEnabled="true" />
     <TextView
         android:text="Or sign up with email"
         android:textAppearance="?android:attr/textAppearanceSmall"

@@ -32,14 +32,16 @@ namespace PULSE
 				public static Card GetBatteryLevel()
 				{
 					return new Card{
-						TextToSpeak = "Battery is at " + CrossBattery.Current.RemainingChargePercent + " percent."
+						TextToSpeak = "Battery is at " + CrossBattery.Current.RemainingChargePercent + " percent.",
+						CardTitle = "Battery"
 					};
 				}
 
 				public static Card GetBatteryStatus()
 				{
 					return new Card{
-						TextToSpeak = "The battery is " + CrossBattery.Current.Status + "."
+						TextToSpeak = "The battery is " + CrossBattery.Current.Status + ".",
+						CardTitle = "Battery"
 					};
 				}
 			}

@@ -22,7 +22,8 @@ namespace PULSE
 				var CurrentWeather = WeatherClient.CurrentWeather.GetByCoordinates(Coord).Result;
 
 				return new Card{
-					TextToSpeak = "The weather for " + CurrentWeather.City.Name + " is " + CurrentWeather.Weather.Value + " with highs of " + (CurrentWeather.Temperature.Max - KelvinConvert) + "and lows of " + (CurrentWeather.Temperature.Min - KelvinConvert) + "."
+					TextToSpeak = "The weather for " + CurrentWeather.City.Name + " is " + CurrentWeather.Weather.Value + " with highs of " + (CurrentWeather.Temperature.Max - KelvinConvert) + "and lows of " + (CurrentWeather.Temperature.Min - KelvinConvert) + ".",
+					CardTitle = "Weather"
 				};
 			}
 
@@ -30,9 +31,9 @@ namespace PULSE
 			{ 
 				var CurrentWeather = WeatherClient.CurrentWeather.GetByName(CityName).Result;
 
-				return new Card
-				{
-					TextToSpeak = "The weather for " + CurrentWeather.City.Name + " is " + CurrentWeather.Weather.Value + " with highs of " + (CurrentWeather.Temperature.Max - KelvinConvert) + "and lows of " + (CurrentWeather.Temperature.Min - KelvinConvert) + "."
+				return new Card{
+					TextToSpeak = "The weather for " + CurrentWeather.City.Name + " is " + CurrentWeather.Weather.Value + " with highs of " + (CurrentWeather.Temperature.Max - KelvinConvert) + "and lows of " + (CurrentWeather.Temperature.Min - KelvinConvert) + ".",
+					CardTitle = "Weather"
 				};
 			}
 
@@ -44,7 +45,7 @@ namespace PULSE
 				var Forecast = WeatherClient.Forecast.GetByCoordinates(Coord).Result;
 
 				return new Card{
-					
+					CardTitle = "Weather"
 				};
 			}
 
@@ -52,9 +53,8 @@ namespace PULSE
 			{ 
 				var Forecast = WeatherClient.Forecast.GetByName(CityName).Result;
 
-				return new Card
-				{
-
+				return new Card{
+					CardTitle = "Weather"
 				};
 			}
 		}
