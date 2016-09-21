@@ -4,4 +4,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px" />
+    android:minHeight="25px">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtEntry"
+        android:hint="Type a command..."
+        android:layout_margin="15dp"
+        android:capitalize="sentences"
+        android:scrollHorizontally="true"
+        android:singleLine="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:background="#ffe0e0e0"
+        android:fadingEdge="horizontal"
+        android:requiresFadingEdge="none"
+        android:fadingEdgeLength="10dp"
+        android:layerType="software"
+        android:drawingCacheQuality="auto">
+        <TextView
+            android:text="PULSE Card Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/wbvContent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:minHeight="250dp" />
+    </LinearLayout>
+</LinearLayout>

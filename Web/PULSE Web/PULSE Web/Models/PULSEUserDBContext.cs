@@ -34,7 +34,8 @@ namespace PULSE_Web.Models
     public class Device
     {
         [Key]
-        public string PublicKey { get; set; }
+        public string PublicToken { get; set; }
         public string Name { get; set; }
+        public string PrivateToken { get; set; }
     }
 }

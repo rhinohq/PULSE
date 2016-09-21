@@ -124,6 +124,8 @@ class MonoPackageManager_Resources {
 		"SQLitePCL.raw.dll",
 		"SQLitePCLPlugin_esqlite3.dll",
 		"Xamarin.Android.Support.v4.dll",
+		"Xamarin.Android.Support.v7.CardView.dll",
+		"Xamarin.Android.Support.v7.RecyclerView.dll",
 		"Java.Interop.dll",
 		"System.Runtime.dll",
 		"System.IO.dll",

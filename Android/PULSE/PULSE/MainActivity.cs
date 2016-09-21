@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Webkit;
 
 using System.Threading;
 
@@ -17,9 +18,16 @@ namespace PULSE
 			Account.CurrentUser = StoreAccount.GetUser();
 
 			if (!Account.CheckUser())
-				StartActivity(typeof(LoginActivity));
+			{
+				Account.LogOut();
+				Finish();
+			}
 
 			Startup();
+
+			var web_view = FindViewById<WebView>(Resource.Id.wbvContent);
+			web_view.Settings.JavaScriptEnabled = true;
+			web_view.LoadUrl("https://www.google.com");
 		}
 
 		void Startup()

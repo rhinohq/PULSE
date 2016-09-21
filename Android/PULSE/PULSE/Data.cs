@@ -103,4 +103,9 @@ namespace PULSE
 			public string Name { get; set; }
 		}
 	}
+
+	public static class StoreModules
+	{ 
+		
+	}
 }

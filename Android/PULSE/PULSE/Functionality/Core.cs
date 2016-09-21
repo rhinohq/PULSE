@@ -31,17 +31,26 @@ namespace PULSE
 			{
 				public static Card GetBatteryLevel()
 				{
-					return new Card{
-						TextToSpeak = "Battery is at " + CrossBattery.Current.RemainingChargePercent + " percent.",
-						CardTitle = "Battery"
+					string Text = "Battery is at " + CrossBattery.Current.RemainingChargePercent + " percent.";
+
+					return new Card
+					{
+						CardType = CardType.Text,
+						TextToSpeak = Text,
+						CardTitle = "Battery",
+						CardText = Text
 					};
 				}
 
 				public static Card GetBatteryStatus()
 				{
+					string Text = "The battery is " + CrossBattery.Current.Status + ".";
+
 					return new Card{
-						TextToSpeak = "The battery is " + CrossBattery.Current.Status + ".",
-						CardTitle = "Battery"
+						CardType = CardType.Text,
+						TextToSpeak = Text,
+						CardTitle = "Battery",
+						CardText = Text
 					};
 				}
 			}
