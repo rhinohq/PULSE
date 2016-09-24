@@ -16,18 +16,18 @@
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLPlugin_esqlite3\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Battery\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.CurrentActivity\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.ExternalMaps\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Geolocator\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Messaging\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Permissions\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.TextToSpeech\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Vibrate\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.batteries\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLPlugin_esqlite3\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Battery\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.CurrentActivity\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.ExternalMaps\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Geolocator\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Messaging\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Permissions\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.TextToSpeech\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Vibrate\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCL.batteries\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLPlugin_esqlite3\library_project_imports\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>

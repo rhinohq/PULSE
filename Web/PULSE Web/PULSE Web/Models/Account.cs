@@ -89,6 +89,7 @@ namespace PULSE_Web.Models
             AccountTypes.Add("Admin", Convert.ToBase64String(Hash.ComputeHash(Encoding.UTF8.GetBytes("Admin"))));
             AccountTypes.Add("Standard", Convert.ToBase64String(Hash.ComputeHash(Encoding.UTF8.GetBytes("Standard"))));
             AccountTypes.Add("Pro", Convert.ToBase64String(Hash.ComputeHash(Encoding.UTF8.GetBytes("Pro"))));
+            AccountTypes.Add("Dev", Convert.ToBase64String(Hash.ComputeHash(Encoding.UTF8.GetBytes("Dev"))));
         }
 
         public static void RemoveCookie(HttpRequest Request)

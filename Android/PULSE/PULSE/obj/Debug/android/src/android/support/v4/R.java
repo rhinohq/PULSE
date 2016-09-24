@@ -166,27 +166,29 @@ containing a value of this type.
     }
     public static final class id {
         public static int btnLogIn=0x7f060005;
-        public static int btnSignUp=0x7f060015;
+        public static int btnSignUp=0x7f060017;
         public static int item_touch_helper_previous_elevation=0x7f060000;
         public static int linearLayout1=0x7f060002;
         public static int pbrSignIn=0x7f060008;
-        public static int rbFemale=0x7f060014;
-        public static int rbMale=0x7f060013;
+        public static int rbFemale=0x7f060016;
+        public static int rbMale=0x7f060015;
         public static int relativeLayout1=0x7f060007;
-        public static int scrollView1=0x7f06000a;
-        public static int txtDOB=0x7f060012;
-        public static int txtEmail=0x7f06000e;
+        public static int scrollView1=0x7f06000c;
+        public static int textView1=0x7f06000a;
+        public static int txtDOB=0x7f060014;
+        public static int txtEmail=0x7f060010;
         public static int txtEntry=0x7f060009;
-        public static int txtFirstName=0x7f06000b;
-        public static int txtLastName=0x7f06000c;
+        public static int txtFirstName=0x7f06000d;
+        public static int txtLastName=0x7f06000e;
         public static int txtLogIn=0x7f060001;
         public static int txtPasswordIn=0x7f060004;
-        public static int txtPasswordUp=0x7f06000f;
-        public static int txtPhoneNum=0x7f060011;
-        public static int txtRePassword=0x7f060010;
+        public static int txtPasswordUp=0x7f060011;
+        public static int txtPhoneNum=0x7f060013;
+        public static int txtRePassword=0x7f060012;
         public static int txtSignUp=0x7f060006;
         public static int txtUsernameIn=0x7f060003;
-        public static int txtUsernameUp=0x7f06000d;
+        public static int txtUsernameUp=0x7f06000f;
+        public static int wbvContent=0x7f06000b;
     }
     public static final class layout {
         public static int login=0x7f040000;
@@ -199,8 +201,7 @@ containing a value of this type.
     public static final class string {
         public static int ApplicationName=0x7f090001;
         public static int Hello=0x7f090000;
-        public static int app_name=0x7f090003;
-        public static int hello=0x7f090002;
+        public static int app_name=0x7f090002;
     }
     public static final class style {
         public static int Base_CardView=0x7f070001;

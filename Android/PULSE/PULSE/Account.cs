@@ -220,8 +220,9 @@ namespace PULSE
 
 		public class Device
 		{
-			public string PublicKey { get; set; }
+			public string PublicToken { get; set; }
 			public string Name { get; set; }
+			public string PrivateToken { get; set; }
 		}
 	}
 }

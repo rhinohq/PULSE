@@ -33,7 +33,7 @@ namespace PULSE
 			{
 				DB.Insert(new Device 
 				{ 
-					PublicKey = Device.PublicKey
+					PublicToken = Device.PublicToken
 				});
 			}
 		}
@@ -68,7 +68,7 @@ namespace PULSE
 				User.AccountType = DBUser.AccountType;
 
 				foreach (Device Device in DB.Query<Device>("SELECT * FROM Device"))
-					User.Devices.Add(new Account.Device { PublicKey = Device.PublicKey });
+					User.Devices.Add(new Account.Device { PublicToken = Device.PublicToken, Name = Device.Name, PrivateToken = Device.PrivateToken });
 
 				return User;
 			}
@@ -98,9 +98,10 @@ namespace PULSE
 		class Device
 		{ 
 			[PrimaryKey]
-			public string PublicKey { get; set; }
+			public string PublicToken { get; set; }
 
 			public string Name { get; set; }
+			public string PrivateToken { get; set; }
 		}
 	}
 
