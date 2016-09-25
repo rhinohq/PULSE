@@ -28,6 +28,8 @@ namespace PULSE_Web.Models
         public string PasswordHash { get; set; }
         public byte[] ProfilePicture { get; set; }
         public virtual ICollection<Device> Devices { get; set; }
+        public virtual ICollection<Module> ActiveModules { get; set; }
+        public virtual ICollection<Module> AllModules { get; set; }
         public string AccountType { get; set; }
     }
 

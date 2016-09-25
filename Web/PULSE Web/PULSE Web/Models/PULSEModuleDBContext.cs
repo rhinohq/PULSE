@@ -21,10 +21,12 @@ namespace PULSE_Web.Models
         public string Author { get; set; }
         public string DatePublished { get; set; }
         public string Description { get; set; }
+        public decimal Price { get; set; }
         public string PartialPath { get; set; }
         public string Blueprint { get; set; }
         public byte[] ModulePic { get; set; }
         public virtual ICollection<ModuleFunc> Funcs { get; set; }
+        public bool Public { get; set; }
 
         public class ModuleFunc
         {
