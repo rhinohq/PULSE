@@ -34,6 +34,7 @@ namespace PULSE
 		{ 
 			Thread Contacts = new Thread(Core.GSM.GetContacts);
 			Thread Location = new Thread(FindLocation);
+			Config.GetConfig();
 
 			Speech.Speak("Hello, " + Account.CurrentUser.FirstName);
 		}

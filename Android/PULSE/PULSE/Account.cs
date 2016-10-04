@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -30,10 +32,13 @@ namespace PULSE
 			string PasswordHash = Authentication.HashCredentials(Username, Password);
 			User User;
 
+			Config.CreateConfig();
+
 			AuthUser AuthUser = new AuthUser
 			{
 				Username = Username,
-				PasswordHash = PasswordHash
+				PasswordHash = PasswordHash,
+				PublicToken = Config.DevicePublicToken
 			};
 
 			JsonSerializerSettings JSONSettings = new JsonSerializerSettings();
@@ -55,10 +60,17 @@ namespace PULSE
 			if (User.Username == null)
 				return false;
 
-			StoreAccount.StoreUser(User);
-			CurrentUser = User;
+			try
+			{
+				StoreAccount.StoreUser(User);
+				CurrentUser = User;
 
-			return true;
+				return true;
+			}
+			catch
+			{
+				return false;
+			}
 		}
 
 		public static User SignUp(User NewUser)
@@ -116,6 +128,16 @@ namespace PULSE
 				return true;
 			else
 				return false;
+		}
+
+		public static string CreatePublicToken(string Name)
+		{
+			MD5 Hash = MD5.Create();
+
+			string Salted = Name + "-" + DateTime.Now;
+			string PublicToken = Convert.ToBase64String(Hash.ComputeHash(Encoding.UTF8.GetBytes(Salted)));
+
+			return PublicToken;
 		}
 
 		public static bool Validation(string Data, char FieldType)
@@ -201,6 +223,7 @@ namespace PULSE
 		{
 			public string Username { get; set; }
 			public string PasswordHash { get; set; }
+			public string PublicToken { get; set; }
 		}
 
 		public class User
@@ -212,7 +235,7 @@ namespace PULSE
 			public char Gender { get; set; }
 			public string PhoneNum { get; set; }
 			public string DOB { get; set; }
-			public string PasswordHash { get; set; }
+			public string PrivateToken { get; set; }
 			public static byte[] ProfilePicture { get; set; }
 			public virtual ICollection<Device> Devices { get; set; }
 			public string AccountType { get; set; }
