@@ -7,3 +7,4 @@ D:\PULSE\Libraries\AuthenticationLib\AuthenticationLib\bin\Debug\AuthenticationL
 D:\PULSE\Libraries\AuthenticationLib\AuthenticationLib\bin\Debug\AuthenticationLib.pdb
 D:\PULSE\Libraries\AuthenticationLib\AuthenticationLib\obj\Debug\AuthenticationLib.dll
 D:\PULSE\Libraries\AuthenticationLib\AuthenticationLib\obj\Debug\AuthenticationLib.pdb
+D:\PULSE\Libraries\AuthenticationLib\AuthenticationLib\obj\Debug\AuthenticationLib.csprojResolveAssemblyReference.cache

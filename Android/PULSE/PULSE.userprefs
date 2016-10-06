@@ -5,13 +5,13 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="PULSE\MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PULSE\Account.cs">
     <Files>
-      <File FileName="PULSE\Account.cs" Line="94" Column="28" />
-      <File FileName="PULSE\Data.cs" Line="10" Column="65" />
+      <File FileName="PULSE\Account.cs" Line="16" Column="1" />
+      <File FileName="PULSE\Data.cs" Line="63" Column="43" />
       <File FileName="PULSE\Functionality\Core.cs" Line="77" Column="39" />
-      <File FileName="PULSE\Config.cs" Line="51" Column="32" />
-      <File FileName="PULSE\MainActivity.cs" Line="36" Column="47" />
+      <File FileName="PULSE\Config.cs" Line="24" Column="62" />
+      <File FileName="PULSE\MainActivity.cs" Line="37" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

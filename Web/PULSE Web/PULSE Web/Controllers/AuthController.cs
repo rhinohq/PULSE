@@ -14,11 +14,11 @@ namespace PULSE_Web.Controllers
 
         // GET api/<controller>/{user}/{hash}
         [HttpGet]
-        public bool Get(string username, string passwordhash)
+        public bool Get(string publictoken, string privatetoken)
         {
-            User user = UserDB.Users.Where(x => x.Username == username).FirstOrDefault();
+            Device device = UserDB.Devices.Where(x => x.PublicToken == publictoken).FirstOrDefault();
 
-            if (user.PasswordHash == Authentication.HashCredentials(user.Email, passwordhash))
+            if (device.PrivateToken == Authentication.Cryptography.Decrypt(privatetoken, publictoken.Substring(publictoken.Length / 2)))
                 return true;
             else
                 return false;
@@ -32,7 +32,9 @@ namespace PULSE_Web.Controllers
 
             if (user.PasswordHash == Authentication.HashCredentials(user.Email, Request.PasswordHash))
             {
-                user.PasswordHash = Request.PasswordHash;
+                Device device = user.Devices.Where(x => x.PublicToken == Request.PublicToken).FirstOrDefault();
+
+                user.PasswordHash = device.PrivateToken;
 
                 return user;
             }
@@ -44,6 +46,7 @@ namespace PULSE_Web.Controllers
         {
             public string Username { get; set; }
             public string PasswordHash { get; set; }
+            public string PublicToken { get; set; }
         }
     }
 }

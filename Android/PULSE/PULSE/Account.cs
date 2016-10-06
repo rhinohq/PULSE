@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,18 +22,19 @@ namespace PULSE
 {
 	public static class Account
 	{
-		public static User CurrentUser { get; set; }
 		const string AuthURL = "http://mypulse.me/api/auth/";
 		const string TokenURL = "http://mypulse.me/api/token/";
 		const string UserURL = "http://mypulse.me/api/user/";
 
 		public static bool Login(string Username, string Password)
 		{
-			WebClient Client = new WebClient();
+			HttpClient Client = new HttpClient();
 			string PasswordHash = Authentication.HashCredentials(Username, Password);
+			string Request = TokenURL + Android.OS.Build.Model + "/" + Username + "/" + PasswordHash;
 			User User;
 
-			Config.CreateConfig();
+			string Response = Client.PutAsync(Request, 
+			Config.CreateConfig(Response);
 
 			AuthUser AuthUser = new AuthUser
 			{
@@ -63,7 +65,6 @@ namespace PULSE
 			try
 			{
 				StoreAccount.StoreUser(User);
-				CurrentUser = User;
 
 				return true;
 			}
@@ -112,7 +113,7 @@ namespace PULSE
 				return false;
 
 			WebClient Client = new WebClient();
-			string Request = AuthURL + CurrentUser.Username + "/" + CurrentUser.PasswordHash;
+			string Request = AuthURL + Config.DevicePublicToken + "/" + Config.DevicePrivateToken + "/" + Config.Username;
 			string Response = "";
 
 			try

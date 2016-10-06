@@ -20,7 +20,7 @@ namespace PULSE_Web.Controllers
                 Device device = UserDB.Devices.Where(x => x.PublicToken == publictoken).FirstOrDefault();
                 User user = UserDB.Users.Where(x => x.Username == username).FirstOrDefault();
                 
-                if (device != null && device.PublicToken == publictoken)
+                if (device.PublicToken == publictoken)
                 {
                     if (device.PrivateToken == null)
                     {
@@ -46,7 +46,7 @@ namespace PULSE_Web.Controllers
         }
 
         // PUT api/<controller>/5
-        public void Put(string name, string username, string passwordhash)
+        public string Put(string name, string username, string passwordhash)
         {
             if (Account.VerifyUser(username, passwordhash))
             {
@@ -58,7 +58,11 @@ namespace PULSE_Web.Controllers
 
                 UserDB.Devices.Add(device);
                 UserDB.SaveChangesAsync();
+
+                return device.PublicToken;
             }
+            else
+                return null;
         }
 
         // DELETE api/<controller>/5
@@ -66,11 +70,16 @@ namespace PULSE_Web.Controllers
         {
             Device device = UserDB.Devices.Where(x => x.PublicToken == publictoken).FirstOrDefault();
 
-            if (device != null && device.PrivateToken == privatetoken)
+            if (device.PrivateToken == privatetoken)
             {
                 UserDB.Devices.Remove(device);
+
+                foreach (User user in UserDB.Users)
+                {
+                    user.Devices.Remove(device);
+                }
+
                 UserDB.SaveChangesAsync();
-                // TODO: Remove device from users
             }
         }
 

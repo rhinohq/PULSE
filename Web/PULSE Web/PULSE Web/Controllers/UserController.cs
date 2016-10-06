@@ -5,17 +5,13 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web.Http;
 
+using AuthenticationLib;
+
 namespace PULSE_Web.Controllers
 {
     public class UserController : ApiController
     {
         private static PULSEUserDB UserDB = new PULSEUserDB();
-
-        // GET api/<controller>
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
 
         // GET api/<controller>/5
         public bool Get(string Data)
@@ -52,8 +48,20 @@ namespace PULSE_Web.Controllers
         }
 
         // DELETE api/<controller>/5
-        public void Delete(int id)
+        public void Delete(string Username, string EncryptPasswordHash)
         {
+            User user = UserDB.Users.Where(x => x.Username == Username).FirstOrDefault();
+
+            if (user != null)
+            {
+                string PasswordHash = Authentication.HashCredentials(user.Email, Authentication.Cryptography.Decrypt(EncryptPasswordHash, user.PhoneNum));
+
+                if (user.PasswordHash == PasswordHash)
+                {
+                    UserDB.Users.Remove(user);
+                    UserDB.SaveChangesAsync();
+                } 
+            }
         }
     }
 }

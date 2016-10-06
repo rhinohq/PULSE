@@ -10,7 +10,7 @@ namespace PULSE
 	{
 		static XmlDocument ConfigFile { get; set; }
 
-		public static void CreateConfig()
+		public static void CreateConfig(string PublicToken)
 		{
 			ConfigFile = new XmlDocument();
 
@@ -21,7 +21,7 @@ namespace PULSE
 			ConfigFile.AppendChild(Root);
 
 			XmlElement PubTok = ConfigFile.CreateElement(string.Empty, "DevicePublicToken", string.Empty);
-			XmlText PubTokText = ConfigFile.CreateTextNode(Account.CreatePublicToken(Android.OS.Build.Model));
+			XmlText PubTokText = ConfigFile.CreateTextNode(PublicToken);
 			PubTok.AppendChild(PubTokText);
 			Root.AppendChild(PubTok);
 
