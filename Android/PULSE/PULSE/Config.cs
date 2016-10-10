@@ -57,7 +57,14 @@ namespace PULSE
 
 		public static void GetConfig()
 		{
-			ConfigFile.Load(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PULSEConfig.xml"));
+			try
+			{
+				ConfigFile.Load(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PULSEConfig.xml"));
+			}
+			catch 
+			{
+				ConfigFile = null;
+			}
 		}
 
 		public static string GetNodeValue(string NodePath)

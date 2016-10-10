@@ -1,20 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 
 using Android.Graphics;
 using Android.Widget;
-
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 
 using RestSharp;
 
@@ -46,10 +39,6 @@ namespace PULSE
 				PasswordHash = PasswordHash,
 				PublicToken = Config.DevicePublicToken
 			};
-
-			JsonSerializerSettings JSONSettings = new JsonSerializerSettings();
-			JSONSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-			string Data = JsonConvert.SerializeObject(AuthUser, JSONSettings);
 
 			try
 			{
