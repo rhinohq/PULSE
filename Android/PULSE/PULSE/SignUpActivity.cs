@@ -45,18 +45,18 @@ namespace PULSE
 					else
 						UserGender = 'f';
 
-					Account.User NewUser = new Account.User {
+					Account.NewUser NewUser = new Account.NewUser {
 						FirstName = txt_FirstName.Text,
 						LastName = txt_LastName.Text,
 						Username = txt_Username.Text,
-						PasswordHash = Authentication.HashCredentials(txt_Username.Text, txt_Password.Text),
+						PasswordHash = txt_Password.Text,
 						Email = txt_Email.Text,
 						Gender = UserGender,
 						PhoneNum = txt_PhoneNum.Text,
 						DOB = txt_DOB.Text
 					};
 
-					StoreAccount.StoreUser(Account.SignUp(NewUser));
+					Account.SignUp(NewUser);
 				}
 			};
 		}

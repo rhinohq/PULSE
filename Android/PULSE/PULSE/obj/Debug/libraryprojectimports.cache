@@ -11,10 +11,12 @@
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Permissions\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.TextToSpeech\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Vibrate\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\RestSharp\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.batteries\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLPlugin_esqlite3\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_green\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_v2\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLRaw.core\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLRaw.lib.e_sqlite3\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLRaw.provider.e_sqlite3\library_project_imports\res</ResolvedResourceDirectory>
@@ -29,10 +31,12 @@
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Permissions\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.TextToSpeech\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Vibrate\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\RestSharp\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCL.batteries\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLPlugin_esqlite3\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLRaw.batteries_green\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLRaw.batteries_v2\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLRaw.core\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLRaw.lib.e_sqlite3\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLRaw.provider.e_sqlite3\library_project_imports\assets</ResolvedAssetDirectory>
@@ -48,10 +52,12 @@
     <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Permissions.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.TextToSpeech.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\Plugin.Vibrate.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\RestSharp.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.batteries.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCL.raw.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLPlugin_esqlite3.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_green.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_v2.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLRaw.core.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLRaw.lib.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\PULSE\Android\PULSE\PULSE\obj\Debug\__library_projects__\SQLitePCLRaw.provider.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>

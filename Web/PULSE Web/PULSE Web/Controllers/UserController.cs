@@ -37,9 +37,9 @@ namespace PULSE_Web.Controllers
         }
 
         // POST api/<controller>
-        public User Post(User NewUser)
+        public void Post(User NewUser)
         {
-            return Account.CreateNewUser(NewUser);
+            Account.CreateNewUser(NewUser);
         }
 
         // PUT api/<controller>/5

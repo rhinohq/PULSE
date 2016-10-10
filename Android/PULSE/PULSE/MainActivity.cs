@@ -15,7 +15,7 @@ namespace PULSE
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Main);
 
-			Account.CurrentUser = StoreAccount.GetUser();
+			Config.GetConfig();
 
 			if (!Account.CheckUser())
 			{
@@ -34,9 +34,8 @@ namespace PULSE
 		{ 
 			Thread Contacts = new Thread(Core.GSM.GetContacts);
 			Thread Location = new Thread(FindLocation);
-			Config.GetConfig();
 
-			Speech.Speak("Hello, " + Account.CurrentUser.FirstName);
+			Speech.Speak("Hello, " + Config.FirstName);
 		}
 
 		void CardHandler(Card CurrentCard, bool SpeakToUser)

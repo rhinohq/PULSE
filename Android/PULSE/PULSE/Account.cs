@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 
 using Android.Graphics;
@@ -13,6 +15,8 @@ using Android.Widget;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+
+using RestSharp;
 
 using AuthenticationLib;
 
@@ -28,13 +32,13 @@ namespace PULSE
 
 		public static bool Login(string Username, string Password)
 		{
-			HttpClient Client = new HttpClient();
+			RestClient Client = new RestClient();
 			string PasswordHash = Authentication.HashCredentials(Username, Password);
-			string Request = TokenURL + Android.OS.Build.Model + "/" + Username + "/" + PasswordHash;
 			User User;
 
-			string Response = Client.PutAsync(Request, 
-			Config.CreateConfig(Response);
+			// Get public token from server
+			RestRequest Request = new RestRequest(AuthURL + Android.OS.Build.Model + "/" + Username + "/" + PasswordHash, Method.GET);
+			Config.CreateConfig(Client.Execute(Request).Content);
 
 			AuthUser AuthUser = new AuthUser
 			{
@@ -49,10 +53,10 @@ namespace PULSE
 
 			try
 			{
-				Client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
-				string Response = Client.UploadString(AuthURL, Data);
+				Request = new RestRequest(UserURL, Method.POST);
+				Request.AddJsonBody(AuthUser);
 
-				User = (User)JsonConvert.DeserializeObject(Response, JSONSettings);
+				User = Client.Execute<User>(Request).Data;
 			}
 			catch
 			{
@@ -74,30 +78,26 @@ namespace PULSE
 			}
 		}
 
-		public static User SignUp(User NewUser)
+		public static void SignUp(NewUser NewUser)
 		{ 
-			WebClient Client = new WebClient();
-			User User;
-
-			JsonSerializerSettings JSONSettings = new JsonSerializerSettings();
-			JSONSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-			string Data = JsonConvert.SerializeObject(NewUser, JSONSettings);
+			RestClient Client = new RestClient(UserURL);
+			string Username = NewUser.Username;
+			string Password = NewUser.PasswordHash;
 
 			try
 			{
-				Client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
-				string Response = Client.UploadString(UserURL, Data);
+				RestRequest Request = new RestRequest(Method.PUT);
+				NewUser.PasswordHash = Authentication.HashCredentials(Username, Password);
+				Request.AddJsonBody(NewUser);
+				Client.Execute(Request);
 
-				User = (User)JsonConvert.DeserializeObject(Response, JSONSettings);
+				if (!Login(Username, Password))
+					throw new Exception();
 			}
 			catch
 			{
 				Toast.MakeText(CrossCurrentActivity.Current.Activity, "Error connecting to server", ToastLength.Short).Show();
-
-				User = new User();
 			}
-
-			return User;
 		}
 
 		public static void LogOut()
@@ -109,16 +109,16 @@ namespace PULSE
 
 		public static bool CheckUser()
 		{
-			if (CurrentUser.Username == null)
+			if (Config.DevicePublicToken == null)
 				return false;
 
-			WebClient Client = new WebClient();
-			string Request = AuthURL + Config.DevicePublicToken + "/" + Config.DevicePrivateToken + "/" + Config.Username;
-			string Response = "";
+			string Response = null;
+			RestClient Client = new RestClient(AuthURL);
+			RestRequest Request = new RestRequest(Config.DevicePublicToken + "/" + Config.DevicePrivateToken + "/" + Config.Username, Method.GET);
 
 			try
 			{
-				Response = Client.DownloadString(Request);
+				Response = Client.Execute(Request).Content;
 			}
 			catch
 			{ 
@@ -227,7 +227,7 @@ namespace PULSE
 			public string PublicToken { get; set; }
 		}
 
-		public class User
+		public abstract class BaseUser
 		{ 
 			public string FirstName { get; set; }
 			public string LastName { get; set; }
@@ -236,10 +236,19 @@ namespace PULSE
 			public char Gender { get; set; }
 			public string PhoneNum { get; set; }
 			public string DOB { get; set; }
-			public string PrivateToken { get; set; }
 			public static byte[] ProfilePicture { get; set; }
 			public virtual ICollection<Device> Devices { get; set; }
 			public string AccountType { get; set; }
+		}
+
+		public class User : BaseUser
+		{ 
+			public string PrivateToken { get; set; }
+		}
+
+		public class NewUser : BaseUser
+		{ 
+			public string PasswordHash { get; set; }
 		}
 
 		public class Device

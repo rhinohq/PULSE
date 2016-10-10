@@ -19,11 +19,13 @@ D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Plugin.TextToSpeech.Abstra
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Plugin.TextToSpeech.dll
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Plugin.Vibrate.Abstractions.dll
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\Plugin.Vibrate.dll
+D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\RestSharp.dll
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\SQLite-net.dll
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\SQLitePCL.batteries.dll
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\SQLitePCL.raw.dll
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\SQLitePCLPlugin_esqlite3.dll
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\SQLitePCLRaw.batteries_green.dll
+D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\SQLitePCLRaw.batteries_v2.dll
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\SQLitePCLRaw.core.dll
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
 D:\PULSE\Android\PULSE\PULSE\obj\Debug\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll

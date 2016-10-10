@@ -43,20 +43,15 @@ namespace PULSE_Web.Models
             }
         }
 
-        public static User CreateNewUser(User NewUser)
+        public static void CreateNewUser(User NewUser)
         {
             User user = UserDB.Users.Where(x => x.Username == NewUser.Username).FirstOrDefault();
-
-            if (user != null)
-                return new User();
 
             NewUser.PasswordHash = Authentication.HashCredentials(NewUser.Email, NewUser.PasswordHash);
             NewUser.AccountType = AccountTypes["Standard"];
 
             UserDB.Users.Add(NewUser);
             UserDB.SaveChangesAsync();
-
-            return NewUser;
         }
 
         public static void DeleteUser(string Username, string Password)
